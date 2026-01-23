@@ -3,20 +3,32 @@ import { FaCertificate } from "react-icons/fa";
 
 const certificates = [
   {
-    title: "Foundation Certificate in Higher Education",
-    org: "Informatics Institute of Technology",
-    file: "https://www.linkedin.com/in/isharahasanjan/details/certifications/1757265222767/single-media-viewer?type=DOCUMENT&profileId=ACoAAFPQjG0BrzSwZnQtJg8R1HHRQyRHn7PE39E&lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_certifications_details%3BHSn23woESZ6qWc%2BexiF9KQ%3D%3D",
+    title: "IBM Cybersecurity Analyst",
+    org: "IBM",
+    file: "#", // replace with actual link if you have one
   },
   {
-    title: "Microsoft Security Essentials",
-    org: "LinkedIn Learning",
-    file: "https://lnkd.in/dcw5eUws",
+    title: "CompTIA Security+ (SY0-701)",
+    org: "PACKT / CompTIA",
+    file: "#",
   },
   {
-    title: "Gemini Certification for Students",
+    title: "Machine Learning Specialization",
+    org: "Stanford University",
+    file: "#",
+  },
+  {
+    title: "Google UX / UI Specialization",
     org: "Google",
-    file: "https://edu.exceedlms.com/student/award/SLD2Au2W7KLhVTsNp8iU1yCU",
+    file: "#",
   },
+  {
+    title: "Python (course)",
+    org: "University of Moratuwa",
+    file: "#",
+  },
+
+ 
 ];
 
 function Certificates() {
@@ -26,7 +38,6 @@ function Certificates() {
       className="bg-[#2b2f33] text-white py-24 px-6 md:px-20 glow-hover"
     >
       <div className="max-w-7xl mx-auto">
-
         {/* TITLE */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -43,7 +54,6 @@ function Certificates() {
 
         {/* GRID */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-10">
-
           {certificates.map((cert, i) => (
             <motion.div
               key={i}
@@ -54,8 +64,7 @@ function Certificates() {
               className="bg-[#1f2226] rounded-xl p-8
                 border border-transparent
                 hover:border-yellow-400
-                transition-all duration-300
-              "
+                transition-all duration-300"
             >
               <FaCertificate className="text-yellow-400 text-4xl mb-4" />
 
@@ -77,7 +86,6 @@ function Certificates() {
               </a>
             </motion.div>
           ))}
-
         </div>
       </div>
     </section>
