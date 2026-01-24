@@ -4,8 +4,8 @@ import { FaGithub, FaExternalLinkAlt, FaTimes } from "react-icons/fa";
 import procurax from "../assets/procurax.png";
 import walletx from "../assets/walletx.png";
 import portfolioImg from "../assets/aakashPort.png";
-import trafficImg from "../assets/traffic.png";
 import intimate from "../assets/intimate.png";
+import enerbide from "../assets/enerbrige.png";
 
 
 const projects = [
@@ -39,6 +39,14 @@ const projects = [
   github: "https://github.com/your-github-link-here",
   image: intimate,
   },
+{
+   title: "Climate Action Web Platform",
+  desc: "Designed and developed a dynamic web platform for climate action using HTML, CSS, and JavaScript. Implemented interactive UI components for data visualization and user engagement, with responsive design to ensure accessibility across different devices.",
+  tech: ["HTML", "CSS", "JavaScript"],
+  github: "https://github.com/Aakashwije/ENERBRIDGE.git",
+  image: enerbide,
+  },
+
 
 ];
 
