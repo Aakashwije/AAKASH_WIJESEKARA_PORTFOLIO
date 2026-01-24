@@ -6,6 +6,7 @@ import walletx from "../assets/walletx.png";
 import portfolioImg from "../assets/aakashPort.png";
 import intimate from "../assets/intimate.png";
 import enerbide from "../assets/enerbrige.png";
+import SRS from "../assets/SRS.png";
 
 
 const projects = [
@@ -46,6 +47,17 @@ const projects = [
   github: "https://github.com/Aakashwije/ENERBRIDGE.git",
   image: enerbide,
   },
+  {
+  title: "Student Management System",
+  desc: "Developed a Student Management System application to manage student records efficiently, including adding, updating, searching, and deleting student details. Implemented a user-friendly interface with validation and structured data handling to ensure accuracy and smooth system performance.",
+  tech: ["C#", ".NET", "Windows Forms", "SQL Server"],
+  github: "https://github.com/Aakashwije/STUDENT_ENROLEMT_SYSTEM_C-.git",
+  image: SRS,
+},
+
+
+
+
 
 
 ];
