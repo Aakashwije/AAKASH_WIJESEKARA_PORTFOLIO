@@ -5,6 +5,7 @@ import procurax from "../assets/procurax.png";
 import walletx from "../assets/walletx.png";
 import portfolioImg from "../assets/aakashPort.png";
 import trafficImg from "../assets/traffic.png";
+import intimate from "../assets/intimate.png";
 
 
 const projects = [
@@ -36,7 +37,7 @@ const projects = [
   desc: "Designed and developed a dynamic web platform for intimate hygiene enterprises using React. Implemented interactive UI components for enhanced user engagement and smooth navigation. Applied responsive design principles to ensure accessibility across multiple devices, integrating modern web technologies including HTML, CSS, and JavaScript for a performant and visually appealing experience.",
   tech: ["React", "HTML", "CSS", "JavaScript"],
   github: "https://github.com/your-github-link-here",
-  image: procurax,
+  image: intimate,
   },
 
 ];
