@@ -14,7 +14,7 @@ import Achievements from "./components/Achievements.jsx";
 import Activities from "./components/Activities.jsx";
 import Contact from "./components/Contact.jsx";
 import Footer from "./components/Footer.jsx";
-
+import Testimonials from "./components/Testimonials.jsx";
 function App() {
   const [loading, setLoading] = useState(true);
   const [isMobile, setIsMobile] = useState(false);
@@ -65,6 +65,7 @@ function App() {
               <Education />
               <Achievements />
               <Activities />
+              <Testimonials />
               <Contact />
               <Footer />
             </motion.div>
