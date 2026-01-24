@@ -24,10 +24,10 @@ function Contact() {
 
     emailjs
       .sendForm(
-        "service_6j475lh",       // ✅ Service ID
-        "template_eqpkd29",      // ✅ Template ID
+        "service_p6rpuyf",       // ✅ Service ID
+        "template_8rjkagi",      // ✅ Template ID
         form.current,
-        "xlwgTM_oSL0NzAlhK"      // ✅ Public Key
+        "YiMktA5jPUax2Zztr"      // ✅ Public Key
       )
       .then(
         () => {
