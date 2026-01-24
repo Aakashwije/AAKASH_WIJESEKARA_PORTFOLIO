@@ -5,30 +5,63 @@ const certificates = [
   {
     title: "IBM Cybersecurity Analyst",
     org: "IBM",
-    file: "#", // replace with actual link if you have one
+    file: "https://www.linkedin.com/in/aakash-wijesekara-611588318/details/certifications/1757352151478/single-media-viewer/?profileId=ACoAAFCH_W0Bi8TNPhWZgueJF5NmQtwHntvpg_M", 
   },
   {
-    title: "CompTIA Security+ (SY0-701)",
+    title: "CompTIA Security+ Certification",
     org: "PACKT / CompTIA",
-    file: "#",
+    file: "https://www.linkedin.com/in/aakash-wijesekara-611588318/details/certifications/1758828732284/single-media-viewer/?profileId=ACoAAFCH_W0Bi8TNPhWZgueJF5NmQtwHntvpg_M",
   },
   {
     title: "Machine Learning Specialization",
     org: "Stanford University",
-    file: "#",
+    file: "https://www.linkedin.com/in/aakash-wijesekara-611588318/details/certifications/1756321905372/single-media-viewer/?profileId=ACoAAFCH_W0Bi8TNPhWZgueJF5NmQtwHntvpg_M",
   },
   {
     title: "Google UX / UI Specialization",
     org: "Google",
-    file: "#",
+    file: "https://www.linkedin.com/in/aakash-wijesekara-611588318/details/certifications/1756145259626/single-media-viewer/?profileId=ACoAAFCH_W0Bi8TNPhWZgueJF5NmQtwHntvpg_M",
   },
   {
-    title: "Python (course)",
-    org: "University of Moratuwa",
-    file: "#",
+    title: "Designing User Interfaces and Experiences (UI/UX)",
+    org: "IBM",
+    file: "https://www.linkedin.com/in/aakash-wijesekara-611588318/details/certifications/1769287487798/single-media-viewer/?profileId=ACoAAFCH_W0Bi8TNPhWZgueJF5NmQtwHntvpg_M",
   },
-
- 
+  {
+    title: "Database Structures and Management with MySQL",
+    org: "IBM",
+    file: "https://www.linkedin.com/in/aakash-wijesekara-611588318/details/certifications/1767878814971/single-media-viewer/?profileId=ACoAAFCH_W0Bi8TNPhWZgueJF5NmQtwHntvpg_M",
+  },
+  {
+    title: "Java Development with Databases",
+    org: "SkillUp",
+    file: "https://www.linkedin.com/in/aakash-wijesekara-611588318/details/certifications/1769287814497/single-media-viewer/?profileId=ACoAAFCH_W0Bi8TNPhWZgueJF5NmQtwHntvpg_M",
+  },
+   {
+    title: "Spring Framework for Java Development",
+    org: "SkillUp",
+    file: "https://www.linkedin.com/in/aakash-wijesekara-611588318/details/certifications/1769288043682/single-media-viewer/?profileId=ACoAAFCH_W0Bi8TNPhWZgueJF5NmQtwHntvpg_M",
+  },
+   {
+    title: "Version Control",
+    org: "Meta",
+    file: "https://www.linkedin.com/in/aakash-wijesekara-611588318/details/certifications/1769288251086/single-media-viewer/?profileId=ACoAAFCH_W0Bi8TNPhWZgueJF5NmQtwHntvpg_M",
+  },
+  {
+    title: "Advanced React",
+    org: "Meta",
+    file: "https://www.linkedin.com/in/aakash-wijesekara-611588318/details/certifications/1769288555395/single-media-viewer/?profileId=ACoAAFCH_W0Bi8TNPhWZgueJF5NmQtwHntvpg_M",
+  },
+  {
+    title: "Django Web Framework Certification",
+    org: "Meta",
+    file: "https://www.linkedin.com/in/aakash-wijesekara-611588318/details/certifications/1769288688072/single-media-viewer/?profileId=ACoAAFCH_W0Bi8TNPhWZgueJF5NmQtwHntvpg_M",
+  },
+  {
+    title: "Python Certification",
+    org: "University of Moratuwa",
+    file: "https://www.linkedin.com/in/aakash-wijesekara-611588318/details/certifications/1748926614435/single-media-viewer/?profileId=ACoAAFCH_W0Bi8TNPhWZgueJF5NmQtwHntvpg_M",
+  },
 ];
 
 function Certificates() {
