@@ -20,7 +20,7 @@ const projects = [
     title: "Wallet X – Smart Money Management App",
   desc: "A smart personal finance mobile app to track income, expenses, budgets, and transactions with a clean dashboard UI. Built with secure authentication using Clerk and a Node.js backend connected to a MySQL database for reliable data storage and management.",
   tech: ["React Native", "Node.js", "MySQL", "Clerk Auth"],
-  github: "https://github.com/your-github-link-here",
+  github: "https://github.com/Aakashwije/walletX.git",
   image: walletx,
   },
 
@@ -28,15 +28,15 @@ const projects = [
     title: "Personal Portfolio Website",
     desc: "Responsive portfolio website showcasing academic projects, skills and personal profile with clean UI and smooth navigation.",
     tech: ["React", "CSS", "Tailwind CSS"],
-    github: "https://github.com/Shara-Hasanjan/My_Portfolio.git",
+    github: "https://github.com/Aakashwije/AAKASH_WIJESEKARA_PORTFOLIO.git",
     image: portfolioImg,
   },
   {
-    title: "Traffic Management System",
-    desc: "Python application modeling traffic data by analyzing the traffic data of the day.",
-    tech: ["Python"],
-    github: "https://github.com/Shara-Hasanjan/SD1-CW-Traffic-System.git",
-    image: trafficImg,
+   title: "Intimate Hygiene Enterprise Web Platform",
+  desc: "Designed and developed a dynamic web platform for intimate hygiene enterprises using React. Implemented interactive UI components for enhanced user engagement and smooth navigation. Applied responsive design principles to ensure accessibility across multiple devices, integrating modern web technologies including HTML, CSS, and JavaScript for a performant and visually appealing experience.",
+  tech: ["React", "HTML", "CSS", "JavaScript"],
+  github: "https://github.com/your-github-link-here",
+  image: procurax,
   },
 
 ];
