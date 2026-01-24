@@ -6,22 +6,24 @@ import { FaPhoneAlt, FaEnvelope } from "react-icons/fa";
 function Testimonials() {
   const testimonials = [
     {
-      name: "Kamal Perera",
-      role: "Project Supervisor",
+      name: "Mr. Riyaz Aluher",
+      role: "Assistant Principal/ Senior Games Master - Royal College",
       image: riyaz,
       description:
-        "Aakash is highly responsible and passionate in his work. He completes tasks on time and communicates clearly with the team.",
-      phone: "+94 77 123 4567",
-      email: "kamal.perera@gmail.com",
+  "Aakash is an outstanding young leader who brings discipline, respect, and consistency to every responsibility. His experience as a Senior Prefect and 1st XI Hockey Captain reflects his ability to guide teams, manage pressure situations, and take confident decisions when it matters most. He communicates clearly, supports others, and builds strong team unity. His dedication to both leadership and competitive sport highlights his resilience, commitment, and ability to deliver results with professionalism."
+,
+      phone: "+94 77 743 1597",
+      email: "riyazaluher@gmail.com",
     },
     {
-      name: "Nimali Fernando",
-      role: "Senior Developer",
+      name: "Maj Gen. Chinthaka Wikramasinghe",
+      role: "Deputy Vice Chancellor Defence and Administration - KDU",
       image: chinthaka,
       description:
-        "Aakash has strong problem-solving skills and is always eager to learn new technologies. Great teamwork and dedication.",
-      phone: "+94 71 987 6543",
-      email: "nimali.fernando@gmail.com",
+  "I have known Aakash personally for years. From my experience, his background at Royal College and his exposure to national and international level sports have shaped him into a disciplined, and highly focused individual. He performs well under pressure and works effectively with teams qualities that strongly impact success in the IT industry. Aakash brings a professional mindset, leadership attitude, and commitment to continuous improvement into everything he does."
+,
+      phone: "+94 76 470 4343",
+      email: "chinthaka06@yahoo.com",
     },
   ];
 
@@ -51,27 +53,26 @@ function Testimonials() {
                 </div>
               </div>
 
-              <p className="text-gray-300 leading-relaxed mb-6">
-                "{t.description}"
-              </p>
+            <p className="text-gray-300 leading-relaxed mb-6 text-justify">
+  "{t.description}"
+</p>
 
-              {/* ✅ Contact Info With Icons */}
-              <div className="space-y-3 text-gray-300">
-                <div className="flex items-center gap-3">
-                  <FaPhoneAlt className="text-yellow-400" />
-                  <span className="text-white font-medium">{t.phone}</span>
-                </div>
+              <div className="space-y-3 text-gray-300 flex flex-col items-center text-center">
+  <div className="flex items-center justify-center gap-3">
+    <FaPhoneAlt className="text-yellow-400" />
+    <span className="text-white font-medium">{t.phone}</span>
+  </div>
 
-                <div className="flex items-center gap-3">
-                  <FaEnvelope className="text-yellow-400" />
-                  <a
-                    href={`mailto:${t.email}`}
-                    className="text-yellow-400 hover:underline"
-                  >
-                    {t.email}
-                  </a>
-                </div>
-              </div>
+  <div className="flex items-center justify-center gap-3">
+    <FaEnvelope className="text-yellow-400" />
+    <a
+      href={`mailto:${t.email}`}
+      className="text-yellow-400 hover:underline"
+    >
+      {t.email}
+    </a>
+  </div>
+</div>
             </div>
           ))}
         </div>
