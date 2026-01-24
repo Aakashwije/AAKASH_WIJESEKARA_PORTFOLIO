@@ -2,23 +2,30 @@ import { motion } from "framer-motion";
 
 const educationData = [
   {
-    year: "2024 - Present",
+    year: "2025 - Present",
     title: "BSc (Hons) Computer Science",
     place: "University Of Westminster ",
     desc: "Studying core computer science subjects including software engineering, algorithms, databases, and web technologies with hands-on project experience.",
   },
+ {
+  year: "2022",
+  title: "Assured Diploma in Information Technology",
+  place: "ESOFT Metro Campus (Pearson)",
+  desc: "Completed a strong foundation in IT and programming, covering core computing concepts, problem-solving, and basic software development skills.",
+},
   {
-    year: "2023",
-    title: "Foundation in Information Technology",
-    place: "Informatics Institute of Technology (IIT)",
-    desc: "Completed foundation with strong fundamentals in programming, mathematics, and IT concepts.",
-  },
-  {
-    year: "2012 - 2023",
+    year: "2010 - 2020",
     title: "GCE Ordinary Level",
-    place: "Mount Calvary High School",
+    place: "Royal Collage, Colombo 7",
     desc: "Active student: Senior Prefect, Senior Scout, Volleyball Player, and strong academic performer.",
   },
+  {
+  year: "2020 - 2023",
+  title: "GCE Advanced Level",
+  place: "Royal College, Colombo 07",
+  desc: "Served as a Senior Prefect and actively participated in sports and leadership activities alongside academics.",
+},
+
 ];
 
 function Education() {

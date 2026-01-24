@@ -1,26 +1,72 @@
 import { motion } from "framer-motion";
-import { FaUsers, FaMedal, FaRunning, FaStar } from "react-icons/fa";
+import {
+  FaStar,
+  FaMedal,
+  FaRunning,
+  FaUsers,
+  FaFlag,
+  FaTrophy,
+  FaCrown,
+  FaShieldAlt,
+} from "react-icons/fa";
+
 
 const activities = [
   {
-    title: "Senior Prefect",
-    desc: "Demonstrated leadership, discipline, and responsibility in managing student activities and maintaining school standards.",
-    icon: <FaStar />,
+    year: "2025",
+    title: "Represented the Mercantile Hockey Team",
+    place: "Mercantile Hockey",
+    desc: "Competed in national-level mercantile hockey tournaments representing the Mercantile team.",
+    icon: <FaFlag />,
   },
   {
-    title: "Senior Scout",
-    desc: "Developed teamwork, survival skills, and community service values through scouting programs and leadership camps.",
+    year: "2024",
+    title: "Co-Chair – Blue & Gold Hockey 7s Tournament",
+    place: "Royal College Hockey Club (RCHC)",
+    desc: "Co-chaired the Blue & Gold Hockey 7s, the largest hockey tournament in Sri Lanka, managing operations and event coordination.",
+    icon: <FaTrophy />,
+  },
+  {
+    year: "2023 - 2025",
+    title: "Represented the National Hockey Team",
+    place: "Sri Lanka National Team",
+    desc: "Represented Sri Lanka at competitive events, showcasing discipline, leadership, and teamwork at the highest level.",
+    icon: <FaShieldAlt />,
+  },
+  {
+    year: "2024 - Present",
+    title: "Representing CIAP (Pvt) Ltd Hockey Team",
+    place: "CIAP (Pvt) Ltd",
+    desc: "Currently representing the CIAP (Pvt) Ltd hockey team in competitive tournaments.",
     icon: <FaMedal />,
   },
   {
-    title: "Volleyball Player",
-    desc: "Active member of school volleyball team, gaining experience in teamwork, strategy, and competitive sportsmanship.",
-    icon: <FaRunning />,
+    year: "2023/24",
+    title: "Senior Prefect",
+    place: "Royal College, Colombo 07",
+    desc: "Served as a Senior Prefect, contributing to student leadership, event coordination, and discipline management.",
+    icon: <FaCrown />,
   },
   {
-    title: "Team Collaboration",
-    desc: "Experienced in working with diverse teams in academic and project environments using agile teamwork practices.",
-    icon: <FaUsers />,
+    year: "2021 - 2024",
+    title: "Double Coloursman (Hockey & Squash)",
+    place: "Royal College, Colombo 07",
+    desc: "Awarded Double Colours for outstanding performance in Hockey and Squash across three years.",
+    icon: <FaStar />,
+  },
+  {
+    year: "2023",
+    title: "Captain – Royal College 1st XI Hockey Team",
+    place: "Royal College, Colombo 07",
+    desc: "Led the 1st XI Hockey team as Captain, focusing on performance, teamwork, and match leadership.",
+    icon: <FaTrophy />,
+  },
+  {
+    year: "2019",
+    title: "Represented the National Squash Team",
+    place: "Sri Lanka National Team",
+    desc: "Represented Sri Lanka in squash competitions, demonstrating high-level skill and competitive performance.",
+    icon: <FaMedal />,
   },
 ];
 
@@ -53,30 +99,33 @@ function Activities() {
 
           {activities.map((item, i) => (
             <motion.div
-              key={i}
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: i * 0.1 }}
-              viewport={{ once: true }}
-              className="
-                bg-[#1f2226] rounded-xl p-6 text-center
-                border border-transparent
-                hover:border-yellow-400
-                transition-all duration-300 
-                "
-            >
-              <div className="text-yellow-400 text-4xl mb-4">
-                {item.icon}
-              </div>
+  key={i}
+  initial={{ opacity: 0, y: 40 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.6, delay: i * 0.1 }}
+  viewport={{ once: true }}
+  className="
+    bg-[#1f2226] rounded-xl p-6 text-center
+    border border-transparent
+    hover:border-yellow-400
+    transition-all duration-300 
+  "
+>
+  <div className="flex justify-center mb-4">
+    <span className="text-yellow-400 text-4xl">
+      {item.icon}
+    </span>
+  </div>
 
-              <h3 className="text-lg font-semibold mb-3">
-                {item.title}
-              </h3>
+  <h3 className="text-lg font-semibold mb-3">
+    {item.title}
+  </h3>
 
-              <p className="text-gray-400 text-sm leading-relaxed">
-                {item.desc}
-              </p>
-            </motion.div>
+  <p className="text-gray-400 text-sm leading-relaxed">
+    {item.desc}
+  </p>
+</motion.div>
+
           ))}
 
         </div>
