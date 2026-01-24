@@ -1,19 +1,29 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { FaGithub, FaExternalLinkAlt, FaTimes } from "react-icons/fa";
-import workzupImg from "../assets/workzup.png";
-import portfolioImg from "../assets/portfolio.png";
+import procurax from "../assets/procurax.png";
+import walletx from "../assets/walletx.png";
+import portfolioImg from "../assets/aakashPort.png";
 import trafficImg from "../assets/traffic.png";
 
 
 const projects = [
   {
-    title: "WorkzUp – Job Matching Platform - SDGP",
-    desc: "Web-based platform connecting job seekers with verified employers for part-time and short-term jobs. Focused on secure authentication, job posting, and application management. Developed using team-based agile workflow.",
-    tech: ["React", "MySQL", "Spring Boot","JWT"],
-    github: "https://github.com/AdhishaSamarasinghe/Workzup.git", 
-    image: workzupImg,
+  title: "ProcuraX – Mobile App + Web Admin Dashboard (ICC)",
+  desc: "A smart procurement and construction management system featuring a mobile app for project teams and a web-based admin dashboard for approvals, role management, project tracking, and procurement updates. Supports role-based access control and Google Sheets procurement link integration for real-time project visibility.",
+  tech: ["Flutter", "Dart", "Next.js", "Tailwind CSS", "MongoDB", "FireBase", "Git", "TensorFlow","Python","Twilio"],
+  github: "https://github.com/Aakashwije/ICC_ProcuraX.git",
+  image: procurax,
+}
+,
+  {
+    title: "Wallet X – Smart Money Management App",
+  desc: "A smart personal finance mobile app to track income, expenses, budgets, and transactions with a clean dashboard UI. Built with secure authentication using Clerk and a Node.js backend connected to a MySQL database for reliable data storage and management.",
+  tech: ["React Native", "Node.js", "MySQL", "Clerk Auth"],
+  github: "https://github.com/your-github-link-here",
+  image: walletx,
   },
+
   {
     title: "Personal Portfolio Website",
     desc: "Responsive portfolio website showcasing academic projects, skills and personal profile with clean UI and smooth navigation.",
