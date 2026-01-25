@@ -79,7 +79,7 @@ function Contact() {
           <button
             type="submit"
             disabled={loading}
-            className="border-2 border-yellow-400 text-yellow-400 px-10 py-4 font-semibold hover:bg-yellow-400 hover:text-black transition-all duration-300 flex items-center gap-3 disabled:opacity-60"
+            className="border-2 border-yellow-400 text-yellow-400 px-4 sm:px-10 py-3 sm:py-4 font-semibold hover:bg-yellow-400 hover:text-black transition-all duration-300 flex items-center gap-3 disabled:opacity-60"
           >
             {loading && (
               <span className="w-5 h-5 border-2 border-yellow-400 border-t-transparent rounded-full animate-spin"></span>

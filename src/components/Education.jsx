@@ -54,7 +54,7 @@ function Education() {
         <div className="relative">
 
           {/* Vertical Line */}
-          <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-[2px] bg-yellow-400/30"></div>
+          <div className="absolute md:left-1/2 left-4 md:transform md:-translate-x-1/2 h-full w-[2px] bg-yellow-400/30"></div>
 
           <div className="space-y-20">
 
@@ -71,11 +71,11 @@ function Education() {
               >
 
                 {/* Dot */}
-                <span className="absolute left-1/2 transform -translate-x-1/2 w-5 h-5 bg-yellow-400 rounded-full border-4 border-[#2b2f33] z-10"></span>
+                <span className="absolute md:left-1/2 left-4 md:transform md:-translate-x-1/2 w-5 h-5 bg-yellow-400 rounded-full border-4 border-[#2b2f33] z-10"></span>
 
                 {/* Card */}
                 <div
-                  className={`bg-[#1f2226] rounded-xl p-6 md:w-[45%]
+                  className={`bg-[#1f2226] rounded-xl p-6 w-full md:w-[45%]
                     border border-transparent
                     hover:border-yellow-400
                     transition-all duration-300

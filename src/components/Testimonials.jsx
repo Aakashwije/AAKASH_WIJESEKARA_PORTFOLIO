@@ -40,14 +40,14 @@ function Testimonials() {
               key={index}
               className="bg-[#2b2f36] rounded-xl p-8 shadow-lg border border-yellow-400/30 hover:border-yellow-400 transition-all duration-300"
             >
-              <div className="flex items-center gap-5 mb-6">
+              <div className="flex flex-col sm:flex-row items-center gap-5 mb-6 text-center sm:text-left">
                 <img
                   src={t.image}
                   alt={t.name}
-                  className="w-20 h-20 rounded-full object-cover border-2 border-yellow-400"
+                  className="w-20 h-20 rounded-full object-cover border-2 border-yellow-400 mx-auto sm:mx-0"
                 />
 
-                <div>
+                <div className="flex-1">
                   <h3 className="text-xl font-semibold text-white">{t.name}</h3>
                   <p className="text-yellow-400 text-sm">{t.role}</p>
                 </div>
@@ -57,13 +57,13 @@ function Testimonials() {
   "{t.description}"
 </p>
 
-              <div className="space-y-3 text-gray-300 flex flex-col items-center text-center">
-  <div className="flex items-center justify-center gap-3">
+              <div className="space-y-3 text-gray-300 flex flex-col items-center sm:items-start text-center sm:text-left">
+  <div className="flex items-center justify-center sm:justify-start gap-3">
     <FaPhoneAlt className="text-yellow-400" />
     <span className="text-white font-medium">{t.phone}</span>
   </div>
 
-  <div className="flex items-center justify-center gap-3">
+  <div className="flex items-center justify-center sm:justify-start gap-3">
     <FaEnvelope className="text-yellow-400" />
     <a
       href={`mailto:${t.email}`}

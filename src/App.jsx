@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import MobileBlock from "./components/MobileBlock.jsx";
 import { AnimatePresence, motion } from "framer-motion";
 import ScrollTop from "./components/ScrollTop.jsx";
 import Loader from "./components/Loader.jsx";
@@ -17,7 +16,6 @@ import Footer from "./components/Footer.jsx";
 import Testimonials from "./components/Testimonials.jsx";
 function App() {
   const [loading, setLoading] = useState(true);
-  const [isMobile, setIsMobile] = useState(false);
 
   // Loader timer
   useEffect(() => {
@@ -25,52 +23,33 @@ function App() {
     return () => clearTimeout(timer);
   }, []);
 
-  // Detect mobile screen
-  useEffect(() => {
-    const checkScreen = () => {
-      setIsMobile(window.innerWidth < 768);
-    };
-
-    checkScreen();
-    window.addEventListener("resize", checkScreen);
-    return () => window.removeEventListener("resize", checkScreen);
-  }, []);
-
   return (
     <>
-      {/* MOBILE BLOCK PAGE */}
-      {isMobile ? (
-        <MobileBlock />
-      ) : (
-        <>
-          {/* DESKTOP ONLY UI */}
-          <Cursor />
-          <Navbar />
-          <ScrollTop />
+      <Cursor />
+      <Navbar />
+      <ScrollTop />
 
-          <AnimatePresence>
-            {loading && <Loader />}
-          </AnimatePresence>
+      <AnimatePresence>
+        {loading && <Loader />}
+      </AnimatePresence>
 
-          {!loading && (
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, ease: "easeOut" }}
-            >
-              <Hero />
-              <About />
-              <Services />
-              <Portfolio />
-              <Education />
-              <Achievements />
-              <Activities />
-              <Testimonials />
-              <Contact />
-              <Footer />
-            </motion.div>
-          )}
-        </>
+      {!loading && (
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+        >
+          <Hero />
+          <About />
+          <Services />
+          <Portfolio />
+          <Education />
+          <Achievements />
+          <Activities />
+          <Testimonials />
+          <Contact />
+          <Footer />
+        </motion.div>
       )}
     </>
   );

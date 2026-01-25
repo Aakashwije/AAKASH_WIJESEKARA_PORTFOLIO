@@ -78,6 +78,7 @@ function Navbar() {
 
         {/* MOBILE BUTTON */}
         <button
+          aria-label={menuOpen ? "Close menu" : "Open menu"}
           className="md:hidden text-white text-2xl"
           onClick={() => setMenuOpen(!menuOpen)}
         >
@@ -87,14 +88,14 @@ function Navbar() {
 
       {/* MOBILE MENU */}
       {menuOpen && (
-        <div className="md:hidden bg-[#1f232a]/95 backdrop-blur-lg">
+        <div className="md:hidden bg-[#1f232a]/95 backdrop-blur-lg px-6">
           <ul className="flex flex-col items-center py-6 gap-6">
             {navLinks.map((item, i) => (
-              <li key={i}>
+              <li key={i} className="w-full">
                 <a
                   href={item.link}
                   onClick={() => setMenuOpen(false)}
-                  className={`transition ${
+                  className={`block w-full text-center py-3 text-lg transition ${
                     active === item.link
                       ? "text-yellow-400"
                       : "text-gray-300"

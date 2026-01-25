@@ -122,7 +122,7 @@ function Certificates() {
     className="
       inline-flex items-center gap-2
       border border-yellow-400 text-yellow-400
-      px-4 py-2 rounded
+      px-3 sm:px-4 py-2 rounded
       hover:bg-yellow-400 hover:text-black transition
       mx-auto
     "
