@@ -80,7 +80,7 @@ function Certificates() {
           className="text-center mb-16"
         >
           <p className="text-yellow-400 tracking-widest mb-3">CERTIFICATES</p>
-          <h2 className="text-4xl md:text-5xl font-bold">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold">
             My Achievements
           </h2>
         </motion.div>
@@ -95,7 +95,7 @@ function Certificates() {
   transition={{ duration: 0.6, delay: i * 0.1 }}
   viewport={{ once: true }}
   className="
-    bg-[#1f2226] rounded-xl p-8 text-center
+    bg-[#1f2226] rounded-xl p-6 sm:p-8 text-center
     border border-transparent
     hover:border-yellow-400
     transition-all duration-300

@@ -49,7 +49,7 @@ function Contact() {
 
       <div className="max-w-3xl mx-auto px-6">
 
-        <h2 className="text-4xl font-bold text-white mb-10">
+        <h2 className="text-3xl sm:text-4xl font-bold text-white mb-10 text-center md:text-left">
           Contact <span className="text-yellow-400">Me</span>
         </h2>
 
@@ -79,7 +79,7 @@ function Contact() {
           <button
             type="submit"
             disabled={loading}
-            className="border-2 border-yellow-400 text-yellow-400 px-4 sm:px-10 py-3 sm:py-4 font-semibold hover:bg-yellow-400 hover:text-black transition-all duration-300 flex items-center gap-3 disabled:opacity-60"
+            className="border-2 border-yellow-400 text-yellow-400 px-4 sm:px-10 py-3 sm:py-4 font-semibold hover:bg-yellow-400 hover:text-black transition-all duration-300 flex items-center gap-3 disabled:opacity-60 w-full sm:w-auto justify-center"
           >
             {loading && (
               <span className="w-5 h-5 border-2 border-yellow-400 border-t-transparent rounded-full animate-spin"></span>

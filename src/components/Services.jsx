@@ -74,7 +74,7 @@ function Services() {
           className="text-center mb-20"
         >
           <p className="text-yellow-400 tracking-widest mb-3">WHAT I DO</p>
-          <h2 className="text-4xl md:text-5xl font-bold">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold">
             Areas of Learning & Practice
           </h2>
         </motion.div>
@@ -88,7 +88,7 @@ function Services() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: i * 0.08 }}
               viewport={{ once: true }}
-              className="bg-[#1f2226] rounded-xl p-8 text-center hover:scale-[1.03]                     
+              className="bg-[#1f2226] rounded-xl p-6 sm:p-8 text-center hover:scale-[1.03]                     
                 border border-transparent hover:border-yellow-400 transition-transform duration-300"
             >
               <div className="text-yellow-400 text-4xl mb-5 flex justify-center">

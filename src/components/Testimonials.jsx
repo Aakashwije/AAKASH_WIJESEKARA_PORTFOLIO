@@ -30,7 +30,7 @@ function Testimonials() {
   return (
     <section id="testimonials" className="py-24 bg-[#1f2329]">
       <div className="max-w-6xl mx-auto px-6">
-        <h2 className="text-4xl font-bold text-white mb-12 text-center">
+        <h2 className="text-3xl sm:text-4xl font-bold text-white mb-12 text-center">
           Testimonials <span className="text-yellow-400">Reviews</span>
         </h2>
 
@@ -38,7 +38,7 @@ function Testimonials() {
           {testimonials.map((t, index) => (
             <div
               key={index}
-              className="bg-[#2b2f36] rounded-xl p-8 shadow-lg border border-yellow-400/30 hover:border-yellow-400 transition-all duration-300"
+              className="bg-[#2b2f36] rounded-xl p-6 sm:p-8 shadow-lg border border-yellow-400/30 hover:border-yellow-400 transition-all duration-300"
             >
               <div className="flex flex-col sm:flex-row items-center gap-5 mb-6 text-center sm:text-left">
                 <img

@@ -81,7 +81,7 @@ function Projects() {
           className="text-center mb-16"
         >
           <p className="text-yellow-400 tracking-widest mb-3">PROJECTS</p>
-          <h2 className="text-4xl md:text-5xl font-bold">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold">
             Practical Projects
           </h2>
         </motion.div>

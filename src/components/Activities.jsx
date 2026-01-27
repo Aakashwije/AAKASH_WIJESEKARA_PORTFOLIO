@@ -89,7 +89,7 @@ function Activities() {
           <p className="text-yellow-400 tracking-widest mb-3">
             ACTIVITIES & LEADERSHIP
           </p>
-          <h2 className="text-4xl md:text-5xl font-bold">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold">
             Beyond Academics
           </h2>
         </motion.div>

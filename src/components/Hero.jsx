@@ -60,7 +60,7 @@ function Hero() {
         <img
           src={heroImg}
           alt="Hero"
-          className="absolute bottom-0 right-0 md:right-[32%] h-36 sm:h-48 md:h-[92vh] object-contain pointer-events-none drop-shadow-2xl z-10"
+          className="static md:absolute md:bottom-0 md:right-[32%] mt-6 md:mt-0 w-48 sm:w-56 md:w-auto h-auto md:h-[92vh] mx-auto md:mx-0 object-contain pointer-events-none drop-shadow-2xl z-10"
         />
       </picture>
     </section>
