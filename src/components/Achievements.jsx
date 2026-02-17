@@ -5,7 +5,7 @@ const certificates = [
   {
     title: "IBM Cybersecurity Analyst",
     org: "IBM",
-    file: "https://www.linkedin.com/in/aakash-wijesekara-611588318/details/certifications/1757352151478/single-media-viewer/?profileId=ACoAAFCH_W0Bi8TNPhWZgueJF5NmQtwHntvpg_M", 
+    file: "https://www.linkedin.com/in/aakash-wijesekara-611588318/details/certifications/1757352151478/single-media-viewer/?profileId=ACoAAFCH_W0Bi8TNPhWZgueJF5NmQtwHntvpg_M",
   },
   {
     title: "CompTIA Security+ Certification",
@@ -37,12 +37,12 @@ const certificates = [
     org: "SkillUp",
     file: "https://www.linkedin.com/in/aakash-wijesekara-611588318/details/certifications/1769287814497/single-media-viewer/?profileId=ACoAAFCH_W0Bi8TNPhWZgueJF5NmQtwHntvpg_M",
   },
-   {
+  {
     title: "Spring Framework for Java Development",
     org: "SkillUp",
     file: "https://www.linkedin.com/in/aakash-wijesekara-611588318/details/certifications/1769288043682/single-media-viewer/?profileId=ACoAAFCH_W0Bi8TNPhWZgueJF5NmQtwHntvpg_M",
   },
-   {
+  {
     title: "Version Control",
     org: "Meta",
     file: "https://www.linkedin.com/in/aakash-wijesekara-611588318/details/certifications/1769288251086/single-media-viewer/?profileId=ACoAAFCH_W0Bi8TNPhWZgueJF5NmQtwHntvpg_M",
@@ -68,7 +68,7 @@ function Certificates() {
   return (
     <section
       id="certificates"
-      className="bg-[#2b2f33] text-white py-24 px-6 md:px-20 glow-hover"
+      className="bg-[#2b2f33] text-white py-16 md:py-24 px-6 md:px-20 glow-hover"
     >
       <div className="max-w-7xl mx-auto">
         {/* TITLE */}
@@ -89,47 +89,47 @@ function Certificates() {
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-10">
           {certificates.map((cert, i) => (
             <motion.div
-  key={i}
-  initial={{ opacity: 0, y: 40 }}
-  whileInView={{ opacity: 1, y: 0 }}
-  transition={{ duration: 0.6, delay: i * 0.1 }}
-  viewport={{ once: true }}
-  className="
+              key={i}
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: i * 0.1 }}
+              viewport={{ once: true }}
+              className="
     bg-[#1f2226] rounded-xl p-6 sm:p-8 text-center
     border border-transparent
     hover:border-yellow-400
     transition-all duration-300
   "
->
-  {/* Center Icon */}
-  <div className="flex justify-center mb-4">
-    <FaCertificate className="text-yellow-400 text-4xl" />
-  </div>
+            >
+              {/* Center Icon */}
+              <div className="flex justify-center mb-4">
+                <FaCertificate className="text-yellow-400 text-4xl" />
+              </div>
 
-  <h3 className="text-lg font-semibold mb-1">
-    {cert.title}
-  </h3>
+              <h3 className="text-lg font-semibold mb-1">
+                {cert.title}
+              </h3>
 
-  <p className="text-gray-400 text-sm mb-6">
-    {cert.org}
-  </p>
+              <p className="text-gray-400 text-sm mb-6">
+                {cert.org}
+              </p>
 
-  {/* Center Button */}
-  <a
-    href={cert.file}
-    target="_blank"
-    rel="noopener noreferrer"
-    className="
+              {/* Center Button */}
+              <a
+                href={cert.file}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="
       inline-flex items-center gap-2
       border border-yellow-400 text-yellow-400
       px-3 sm:px-4 py-2 rounded
       hover:bg-yellow-400 hover:text-black transition
       mx-auto
     "
-  >
-    👁 View Certificate
-  </a>
-</motion.div>
+              >
+                👁 View Certificate
+              </a>
+            </motion.div>
 
           ))}
         </div>

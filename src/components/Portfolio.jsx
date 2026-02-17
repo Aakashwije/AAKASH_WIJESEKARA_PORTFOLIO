@@ -11,19 +11,19 @@ import SRS from "../assets/SRS.png";
 
 const projects = [
   {
-  title: "ProcuraX – Mobile App + Web Admin Dashboard (ICC)",
-  desc: "A smart procurement and construction management system featuring a mobile app for project teams and a web-based admin dashboard for approvals, role management, project tracking, and procurement updates. Supports role-based access control and Google Sheets procurement link integration for real-time project visibility.",
-  tech: ["Flutter", "Dart", "Next.js", "Tailwind CSS", "MongoDB", "FireBase", "Git", "TensorFlow","Python","Twilio"],
-  github: "https://github.com/Aakashwije/ICC_ProcuraX.git",
-  image: procurax,
-}
-,
+    title: "ProcuraX – Mobile App + Web Admin Dashboard (ICC)",
+    desc: "A smart procurement and construction management system featuring a mobile app for project teams and a web-based admin dashboard for approvals, role management, project tracking, and procurement updates. Supports role-based access control and Google Sheets procurement link integration for real-time project visibility.",
+    tech: ["Flutter", "Dart", "Next.js", "Tailwind CSS", "MongoDB", "FireBase", "Git", "TensorFlow", "Python", "Twilio"],
+    github: "https://github.com/Aakashwije/ICC_ProcuraX.git",
+    image: procurax,
+  }
+  ,
   {
     title: "Wallet X – Smart Money Management App",
-  desc: "A smart personal finance mobile app to track income, expenses, budgets, and transactions with a clean dashboard UI. Built with secure authentication using Clerk and a Node.js backend connected to a MySQL database for reliable data storage and management.",
-  tech: ["React Native", "Node.js", "MySQL", "Clerk Auth"],
-  github: "https://github.com/Aakashwije/walletX.git",
-  image: walletx,
+    desc: "A smart personal finance mobile app to track income, expenses, budgets, and transactions with a clean dashboard UI. Built with secure authentication using Clerk and a Node.js backend connected to a MySQL database for reliable data storage and management.",
+    tech: ["React Native", "Node.js", "MySQL", "Clerk Auth"],
+    github: "https://github.com/Aakashwije/walletX.git",
+    image: walletx,
   },
 
   {
@@ -34,26 +34,26 @@ const projects = [
     image: portfolioImg,
   },
   {
-   title: "Intimate Hygiene Enterprise Web Platform",
-  desc: "Designed and developed a dynamic web platform for intimate hygiene enterprises using React. Implemented interactive UI components for enhanced user engagement and smooth navigation. Applied responsive design principles to ensure accessibility across multiple devices, integrating modern web technologies including HTML, CSS, and JavaScript for a performant and visually appealing experience.",
-  tech: ["React", "HTML", "CSS", "JavaScript"],
-  github: "https://github.com/your-github-link-here",
-  image: intimate,
-  },
-{
-   title: "Climate Action Web Platform",
-  desc: "Designed and developed a dynamic web platform for climate action using HTML, CSS, and JavaScript. Implemented interactive UI components for data visualization and user engagement, with responsive design to ensure accessibility across different devices.",
-  tech: ["HTML", "CSS", "JavaScript"],
-  github: "https://github.com/Aakashwije/ENERBRIDGE.git",
-  image: enerbide,
+    title: "Intimate Hygiene Enterprise Web Platform",
+    desc: "Designed and developed a dynamic web platform for intimate hygiene enterprises using React. Implemented interactive UI components for enhanced user engagement and smooth navigation. Applied responsive design principles to ensure accessibility across multiple devices, integrating modern web technologies including HTML, CSS, and JavaScript for a performant and visually appealing experience.",
+    tech: ["React", "HTML", "CSS", "JavaScript"],
+    github: "https://github.com/your-github-link-here",
+    image: intimate,
   },
   {
-  title: "Student Management System",
-  desc: "Developed a Student Management System application to manage student records efficiently, including adding, updating, searching, and deleting student details. Implemented a user-friendly interface with validation and structured data handling to ensure accuracy and smooth system performance.",
-  tech: ["C#", ".NET", "Windows Forms", "SQL Server"],
-  github: "https://github.com/Aakashwije/STUDENT_ENROLEMT_SYSTEM_C-.git",
-  image: SRS,
-},
+    title: "Climate Action Web Platform",
+    desc: "Designed and developed a dynamic web platform for climate action using HTML, CSS, and JavaScript. Implemented interactive UI components for data visualization and user engagement, with responsive design to ensure accessibility across different devices.",
+    tech: ["HTML", "CSS", "JavaScript"],
+    github: "https://github.com/Aakashwije/ENERBRIDGE.git",
+    image: enerbide,
+  },
+  {
+    title: "Student Management System",
+    desc: "Developed a Student Management System application to manage student records efficiently, including adding, updating, searching, and deleting student details. Implemented a user-friendly interface with validation and structured data handling to ensure accuracy and smooth system performance.",
+    tech: ["C#", ".NET", "Windows Forms", "SQL Server"],
+    github: "https://github.com/Aakashwije/STUDENT_ENROLEMT_SYSTEM_C-.git",
+    image: SRS,
+  },
 
 
 
@@ -68,7 +68,7 @@ function Projects() {
   return (
     <section
       id="projects"
-      className="bg-[#2f3338] text-white py-24 px-6 md:px-20 glow-hover"
+      className="bg-[#2f3338] text-white py-16 md:py-24 px-6 md:px-20 glow-hover"
     >
       <div className="max-w-7xl mx-auto">
 
@@ -157,14 +157,14 @@ function Projects() {
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.8, opacity: 0 }}
               transition={{ duration: 0.3 }}
-              className="bg-[#1f2226] rounded-xl max-w-lg w-full p-6 relative"
+              className="bg-[#1f2226] rounded-xl max-w-lg w-full p-6 relative max-h-[90vh] overflow-y-auto" // Added max-h and overflow-y-auto
             >
 
               <button
                 onClick={() => setActiveProject(null)}
-                className="absolute top-4 right-4 text-gray-400 hover:text-white"
+                className="absolute top-4 right-4 text-gray-400 hover:text-white bg-[#1f2226] rounded-full p-1 z-10" // Added bg and padding for better visibility
               >
-                <FaTimes />
+                <FaTimes size={20} />
               </button>
 
               <img
@@ -177,7 +177,7 @@ function Projects() {
                 {activeProject.title}
               </h3>
 
-              <p className="text-gray-300 mb-4">
+              <p className="text-gray-300 mb-4 text-sm md:text-base"> {/* Adjusted font size for mobile */}
                 {activeProject.desc}
               </p>
 

@@ -19,8 +19,8 @@ const skills = [
 
 function About() {
   return (
-    <section id="about" className="bg-[#2b2f33] text-white py-28 px-6 md:px-20">
-      <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+    <section id="about" className="bg-[#2b2f33] text-white py-16 md:py-28 px-6 md:px-20">
+      <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 md:gap-16 items-center">
 
         {/* LEFT CONTENT */}
         <motion.div
@@ -36,19 +36,19 @@ function About() {
           </h2>
 
           <p className="text-gray-300 leading-relaxed mb-6">
-             I’m currently pursuing a BSc (Hons) in Computer Science (University of Westminster award) at IIT, Sri Lanka, and have built practical experience designing and delivering end-to-end web and mobile solutions (projects include ProcuraX, EnerBridge, and portfolio work). I hold certifications in cybersecurity and ML and regularly apply modern stacks such as React, Flutter, Node.js, and SQL/NoSQL databases in both individual and team projects. My coursework and project work have given me hands-on experience in UI design, backend integration, real-time features, and secure system design.
+            I’m currently pursuing a BSc (Hons) in Computer Science (University of Westminster award) at IIT, Sri Lanka, and have built practical experience designing and delivering end-to-end web and mobile solutions (projects include ProcuraX, EnerBridge, and portfolio work). I hold certifications in cybersecurity and ML and regularly apply modern stacks such as React, Flutter, Node.js, and SQL/NoSQL databases in both individual and team projects. My coursework and project work have given me hands-on experience in UI design, backend integration, real-time features, and secure system design.
           </p>
 
           <p className="text-gray-400 leading-relaxed mb-6 text-left md:text-justify">
-           Beyond academics, I’ve held significant leadership roles at Royal College, Colombo 07 — serving as a Senior Prefect and as Captain of the 1st XI Hockey team (led the team to the Hockey Big Match victory after a nine-year gap). I also co-chaired the Blue & Gold Hockey 7s, the largest hockey tournament in Sri Lanka, and have represented both school and national teams in hockey and squash. These experiences taught me strategic leadership, clear communication under pressure, squad management, and how to motivate diverse teams to perform on deadline.
+            Beyond academics, I’ve held significant leadership roles at Royal College, Colombo 07 — serving as a Senior Prefect and as Captain of the 1st XI Hockey team (led the team to the Hockey Big Match victory after a nine-year gap). I also co-chaired the Blue & Gold Hockey 7s, the largest hockey tournament in Sri Lanka, and have represented both school and national teams in hockey and squash. These experiences taught me strategic leadership, clear communication under pressure, squad management, and how to motivate diverse teams to perform on deadline.
 
           </p>
 
           <p className="text-gray-400 leading-relaxed text-left md:text-justify">
-           I combine that leadership with disciplined technical work: I’m comfortable taking a project from concept to delivery, mentoring peers during group work, and adapting quickly to new tools and methods. My strengths are problem solving, rapid prototyping, secure coding practices, and an eagerness to learn — especially in full-stack development, mobile apps, cybersecurity, and machine learning. I’m actively seeking internship or junior-level roles where I can contribute to meaningful products, continue developing technically, and apply the teamwork and leadership skills I gained through prefectship and sport.
+            I combine that leadership with disciplined technical work: I’m comfortable taking a project from concept to delivery, mentoring peers during group work, and adapting quickly to new tools and methods. My strengths are problem solving, rapid prototyping, secure coding practices, and an eagerness to learn — especially in full-stack development, mobile apps, cybersecurity, and machine learning. I’m actively seeking internship or junior-level roles where I can contribute to meaningful products, continue developing technically, and apply the teamwork and leadership skills I gained through prefectship and sport.
 
           </p>
-          
+
         </motion.div>
 
         {/* RIGHT SKILLS */}

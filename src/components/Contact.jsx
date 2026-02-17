@@ -44,7 +44,7 @@ function Contact() {
   };
 
   return (
-    <section id="contact" className="py-24 bg-[#2b2f36] relative">
+    <section id="contact" className="py-16 md:py-24 bg-[#2b2f36] relative">
       <Toaster position="top-right" />
 
       <div className="max-w-3xl mx-auto px-6">

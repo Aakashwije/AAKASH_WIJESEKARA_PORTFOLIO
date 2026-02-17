@@ -63,7 +63,7 @@ const services = [
 
 function Services() {
   return (
-    <section id="services" className="bg-[#24282c] text-white py-28 px-6 md:px-20">
+    <section id="services" className="bg-[#24282c] text-white py-16 md:py-28 px-6 md:px-20">
       <div className="max-w-7xl mx-auto">
         {/* TITLE */}
         <motion.div

@@ -6,17 +6,17 @@ function Hero() {
   return (
     <section
       id="home"
-      className="relative h-screen bg-[#242629] overflow-hidden"
+      className="relative min-h-screen bg-[#242629] overflow-hidden flex flex-col md:block" // Changed h-screen to min-h-screen
     >
       {/* TECH COMPONENT BACKGROUND */}
       <TechBackground />
 
       {/* CONTENT */}
-      <div className="relative z-10 max-w-[1400px] mx-auto h-full px-6 md:px-14 grid md:grid-cols-3 grid-cols-1 gap-6">
+      <div className="relative z-10 max-w-[1400px] mx-auto h-full px-6 md:px-14 grid md:grid-cols-3 grid-cols-1 gap-6 pt-20 md:pt-0"> {/* Added top padding for mobile */}
 
         {/* LEFT */}
-        <div className="flex flex-col justify-center pb-5 pl-0 md:pl-2 text-white">
-          <h1 className="text-4xl sm:text-5xl md:text-7xl xl:text-8xl font-bold leading-tight text-white">
+        <div className="flex flex-col justify-center pb-5 pl-0 md:pl-2 text-white order-2 md:order-1"> {/* order changed for mobile if needed, but keeping default for now effectively */}
+          <h1 className="text-4xl sm:text-5xl md:text-7xl xl:text-8xl font-bold leading-tight text-white mt-10 md:mt-0">
             Aakash <br />
             Wijesekara<span className="text-yellow-400 ml-1">.</span>
           </h1>
@@ -39,10 +39,10 @@ function Hero() {
           </a>
         </div>
 
-        <div className="hidden md:block"></div>
+        <div className="hidden md:block md:order-2"></div>
 
         {/* RIGHT */}
-        <div className="flex flex-col justify-center pt-10 md:pt-0 pb-10 md:pb-30 pl-0 md:pl-20 text-white">
+        <div className="flex flex-col justify-center pt-5 md:pt-0 pb-10 md:pb-30 pl-0 md:pl-20 text-white order-3">
           <p className="text-yellow-400 tracking-widest text-sm mb-3">INTRODUCTION</p>
 
           <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold mb-6 text-white">
@@ -51,18 +51,14 @@ function Hero() {
         </div>
       </div>
 
-      {/* HERO IMAGE - uses a small public fallback at /assets/hero-mobile.png when available */}
-      <picture>
-        {/* Prefer a PNG mobile image if you add one at public/assets/hero-mobile.png */}
-        <source media="(max-width: 640px)" srcSet="/assets/hero-mobile.png" type="image/png" />
-        {/* Fallback SVG (already present) */}
-        <source media="(max-width: 640px)" srcSet="/assets/hero-mobile.svg" type="image/svg+xml" />
+      {/* HERO IMAGE */}
+      <div className="relative md:absolute md:bottom-0 md:right-[32%] w-full md:w-auto flex justify-center md:block z-0 order-1 md:order-none mt-10 md:mt-0">
         <img
           src={heroImg}
           alt="Hero"
-          className="static md:absolute md:bottom-0 md:right-[32%] mt-6 md:mt-0 w-48 sm:w-56 md:w-auto h-auto md:h-[92vh] mx-auto md:mx-0 object-contain pointer-events-none drop-shadow-2xl z-10"
+          className="w-64 sm:w-80 md:w-auto h-auto md:h-[92vh] object-contain pointer-events-none drop-shadow-2xl"
         />
-      </picture>
+      </div>
     </section>
   );
 }
