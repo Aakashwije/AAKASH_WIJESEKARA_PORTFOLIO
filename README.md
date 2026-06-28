@@ -2,58 +2,50 @@
 
 # Aakash Wijesekara — Portfolio
 
-### A fast, animated, single-page personal portfolio
+A fast, animated, single-page personal portfolio built with React and Vite.
 
-Computer Science Undergraduate · Software Engineer Intern @ WSO2
-
-<br/>
-
-![Status](https://img.shields.io/badge/status-active-success)
-![Build](https://img.shields.io/badge/build-passing-brightgreen)
-![Type](https://img.shields.io/badge/project-private-lightgrey)
-![SPA](https://img.shields.io/badge/architecture-SPA-blueviolet)
+Computer Science Undergraduate · Software Engineer Intern at WSO2
 
 <br/>
 
-![React](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=white)
-![Vite](https://img.shields.io/badge/Vite-7-646CFF?logo=vite&logoColor=white)
-![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4-06B6D4?logo=tailwindcss&logoColor=white)
-![Framer Motion](https://img.shields.io/badge/Framer_Motion-12-0055FF?logo=framer&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-ES2020-F7DF1E?logo=javascript&logoColor=black)
-![EmailJS](https://img.shields.io/badge/EmailJS-contact-FF7139?logo=minutemailer&logoColor=white)
-![ESLint](https://img.shields.io/badge/ESLint-9-4B32C3?logo=eslint&logoColor=white)
-![Node](https://img.shields.io/badge/Node-%E2%89%A520.19-339933?logo=nodedotjs&logoColor=white)
+![Status](https://img.shields.io/badge/status-active-success?style=flat-square)
+![Build](https://img.shields.io/badge/build-passing-brightgreen?style=flat-square)
+![Architecture](https://img.shields.io/badge/architecture-SPA-informational?style=flat-square)
+![React](https://img.shields.io/badge/React-19-blue?style=flat-square)
+![Vite](https://img.shields.io/badge/Vite-7-blue?style=flat-square)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4-blue?style=flat-square)
+![License](https://img.shields.io/badge/license-All_rights_reserved-lightgrey?style=flat-square)
 
 </div>
 
 ---
 
-## 📑 Table of Contents
+## Table of Contents
 
-- [Overview](#-overview)
-- [Features](#-features)
-- [Tech Stack](#-tech-stack)
-- [Architecture](#-architecture)
+- [Overview](#overview)
+- [Features](#features)
+- [Technology Stack](#technology-stack)
+- [Architecture](#architecture)
   - [Component Tree](#component-tree)
-  - [Build & Runtime Flow](#build--runtime-flow)
+  - [Build and Runtime Flow](#build-and-runtime-flow)
   - [Contact Form Flow](#contact-form-flow)
-- [Project Structure](#-project-structure)
-- [Getting Started](#-getting-started)
-- [Configuration](#-configuration)
-- [Available Scripts](#-available-scripts)
-- [Deployment](#-deployment)
-- [License](#-license)
+- [Project Structure](#project-structure)
+- [Getting Started](#getting-started)
+- [Configuration](#configuration)
+- [Available Scripts](#available-scripts)
+- [Deployment](#deployment)
+- [License](#license)
 
 ---
 
-## 🧭 Overview
+## Overview
 
-A modern, responsive single-page application (SPA) that showcases my background, skills,
-professional experience, projects, education, achievements, and testimonials — with a
-working contact form powered by [EmailJS](https://www.emailjs.com/).
+A modern, responsive single-page application (SPA) that presents my background, skills,
+professional experience, projects, education, achievements, and testimonials, together with
+a working contact form powered by [EmailJS](https://www.emailjs.com/).
 
-The site is built as a **static SPA**: there is no backend server. All content is bundled
-at build time and served as static assets, while the contact form talks directly to the
+The site is built as a **static SPA** with no backend server. All content is bundled at build
+time and served as static assets, while the contact form communicates directly with the
 EmailJS API from the browser.
 
 <div align="center">
@@ -64,22 +56,22 @@ EmailJS API from the browser.
 
 ---
 
-## ✨ Features
+## Features
 
-| | Feature | Description |
-|---|---|---|
-| 🎬 | **Animated UI** | Section reveal, staggered skill bars, and page transitions via Framer Motion. |
-| 📱 | **Fully responsive** | Mobile-first layouts with an accessible slide-down mobile menu. |
-| 🧭 | **Smart navigation** | Scroll-spy active section highlighting + hide-on-scroll navbar. |
-| ⚡ | **Real load gating** | Loader is tied to the actual page `load` event (with a safety cap), not a fake timer. |
-| 🖼️ | **Performance-aware** | Lazy-loaded below-the-fold images and a prioritized hero image. |
-| ♿ | **Accessibility** | `prefers-reduced-motion` support, ARIA labels, keyboard-friendly menu (Esc to close). |
-| 📨 | **Working contact form** | Client-side validation + EmailJS delivery with toast feedback. |
-| 🔍 | **SEO ready** | Open Graph / Twitter cards, descriptive meta tags, and theme color. |
+| Feature | Description |
+|---|---|
+| **Animated UI** | Section reveals, staggered skill bars, and page transitions via Framer Motion. |
+| **Fully responsive** | Mobile-first layouts with an accessible slide-down mobile menu. |
+| **Smart navigation** | Scroll-spy active-section highlighting and a hide-on-scroll navbar. |
+| **Real load gating** | The loader is tied to the actual page `load` event with a safety cap, not a fixed timer. |
+| **Performance-aware** | Lazy-loaded below-the-fold images and a prioritized hero image. |
+| **Accessibility** | `prefers-reduced-motion` support, ARIA labels, and a keyboard-friendly menu (Esc to close). |
+| **Working contact form** | Client-side validation with EmailJS delivery and toast feedback. |
+| **SEO ready** | Open Graph and Twitter cards, descriptive meta tags, and a theme color. |
 
 ---
 
-## 🧱 Tech Stack
+## Technology Stack
 
 | Layer | Technologies |
 |---|---|
@@ -87,60 +79,61 @@ EmailJS API from the browser.
 | **Build Tool** | Vite 7 |
 | **Styling** | Tailwind CSS 4 (`@import "tailwindcss"`), PostCSS, Autoprefixer |
 | **Animation** | Framer Motion |
-| **Icons** | react-icons (Font Awesome + Simple Icons) |
+| **Icons** | react-icons (Font Awesome, Simple Icons) |
 | **Notifications** | react-hot-toast |
 | **Email** | emailjs-com |
 | **Tooling** | ESLint 9, Vite Preview |
 
 ---
 
-## 🏗️ Architecture
+## Architecture
 
 ### Component Tree
 
 ```mermaid
 flowchart TD
-    main["main.jsx — createRoot"] --> App["App.jsx"]
+    main["main.jsx (createRoot)"] --> App["App.jsx"]
 
-    App --> Loader["Loader (intro)"]
+    App --> Loader["Loader"]
     App --> Navbar["Navbar (scroll-spy)"]
     App --> ScrollTop["ScrollTop button"]
-    App --> Page{{"Page Sections"}}
+    App --> Page["Page Sections"]
 
-    Page --> Hero
-    Page --> About
-    Page --> Services
-    Page --> Experience
-    Page --> Portfolio
-    Page --> Education
-    Page --> Achievements
-    Page --> Activities
-    Page --> Testimonials
-    Page --> Contact
-    Page --> Footer
+    Page --> Hero["Hero"]
+    Page --> About["About"]
+    Page --> Services["Services"]
+    Page --> Experience["Experience"]
+    Page --> Portfolio["Portfolio"]
+    Page --> Education["Education"]
+    Page --> Achievements["Achievements"]
+    Page --> Activities["Activities"]
+    Page --> Testimonials["Testimonials"]
+    Page --> Contact["Contact"]
+    Page --> Footer["Footer"]
 
     Hero --> TechBackground["TechBackground (animated canvas)"]
-    Contact -. EmailJS .-> Inbox["📧 Email Inbox"]
+    Contact -. EmailJS .-> Inbox["Email Inbox"]
 ```
 
-### Build & Runtime Flow
+### Build and Runtime Flow
 
 ```mermaid
 flowchart LR
-    subgraph Dev["Local Development"]
-        code["src/ — JSX + Tailwind"] --> dev["Vite Dev Server (HMR)"]
+    subgraph Development["Local Development"]
+        srcDev["src (JSX + Tailwind)"] --> devServer["Vite Dev Server (HMR)"]
     end
 
-    subgraph Build["Production Build"]
-        build["vite build"] --> dist["dist/ — static bundle"]
+    subgraph Production["Production Build"]
+        viteBuild["vite build"] --> dist["dist (static bundle)"]
     end
 
-    subgraph Host["Static Hosting / CDN"]
-        dist --> cdn["Vercel · Netlify · GitHub Pages"]
+    subgraph Hosting["Static Hosting / CDN"]
+        cdn["Vercel / Netlify / GitHub Pages"]
     end
 
-    code --> build
-    cdn --> browser["🌐 Browser (SPA)"]
+    srcDev --> viteBuild
+    dist --> cdn
+    cdn --> browser["Browser (SPA)"]
     browser -. contact form .-> emailjs["EmailJS API"]
 ```
 
@@ -148,70 +141,71 @@ flowchart LR
 
 ```mermaid
 sequenceDiagram
-    actor V as Visitor
-    participant F as Contact Form
+    actor Visitor
+    participant Form as Contact Form
     participant SDK as EmailJS SDK
     participant API as EmailJS Service
-    participant I as Inbox
+    participant Inbox
 
-    V->>F: Fill name / email / message
-    V->>F: Click "Send Message"
-    F->>F: Validate required fields
+    Visitor->>Form: Fill name, email, message
+    Visitor->>Form: Click Send Message
+    Form->>Form: Validate required fields
+
     alt Missing fields
-        F-->>V: Toast "Please fill all fields!"
-    else Valid
-        F->>SDK: sendForm(serviceId, templateId, publicKey)
+        Form-->>Visitor: Toast - Please fill all fields
+    else Valid submission
+        Form->>SDK: sendForm(service, template, publicKey)
         SDK->>API: Dispatch templated email
-        API->>I: Deliver message
-        API-->>F: 200 OK
-        F-->>V: Toast "Message sent successfully!"
+        API->>Inbox: Deliver message
+        API-->>Form: 200 OK
+        Form-->>Visitor: Toast - Message sent successfully
     end
 ```
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 
 ```text
 AAKASH_WIJESEKARA_PORTFOLIO/
-├── public/                 # Static assets served as-is (favicon, svg)
+├── public/                     Static assets served as-is (favicon, svg)
 ├── src/
-│   ├── assets/             # Images, icons, resume (PDF)
+│   ├── assets/                 Images, icons, resume (PDF)
 │   ├── components/
-│   │   ├── Navbar.jsx          # Sticky nav, scroll-spy, mobile menu
-│   │   ├── Hero.jsx            # Landing section + animated background
-│   │   ├── TechBackground.jsx  # Canvas particle/network background
-│   │   ├── About.jsx           # Bio + animated technical skill bars
-│   │   ├── Services.jsx        # Areas of learning & practice
-│   │   ├── Experience.jsx      # Professional experience (WSO2)
-│   │   ├── Portfolio.jsx       # Projects grid + detail modal
-│   │   ├── Education.jsx       # Academic timeline
-│   │   ├── Achievements.jsx    # Certificates / achievements
-│   │   ├── Activities.jsx      # Extracurricular activities
-│   │   ├── Testimonials.jsx    # References
-│   │   ├── Contact.jsx         # EmailJS contact form
-│   │   ├── Footer.jsx          # Footer nav + social links
-│   │   ├── Loader.jsx          # Intro loader
-│   │   └── ScrollTop.jsx       # Back-to-top control
-│   ├── App.jsx             # Composition + loader gating
-│   ├── main.jsx            # React entry point
-│   └── index.css           # Tailwind import + base/global styles
-├── index.html              # HTML shell + SEO / social meta
+│   │   ├── Navbar.jsx          Sticky nav, scroll-spy, mobile menu
+│   │   ├── Hero.jsx            Landing section and animated background
+│   │   ├── TechBackground.jsx  Canvas particle/network background
+│   │   ├── About.jsx           Bio and animated technical skill bars
+│   │   ├── Services.jsx        Areas of learning and practice
+│   │   ├── Experience.jsx      Professional experience (WSO2)
+│   │   ├── Portfolio.jsx       Projects grid and detail modal
+│   │   ├── Education.jsx       Academic timeline
+│   │   ├── Achievements.jsx    Certificates and achievements
+│   │   ├── Activities.jsx      Extracurricular activities
+│   │   ├── Testimonials.jsx    References
+│   │   ├── Contact.jsx         EmailJS contact form
+│   │   ├── Footer.jsx          Footer nav and social links
+│   │   ├── Loader.jsx          Intro loader
+│   │   └── ScrollTop.jsx       Back-to-top control
+│   ├── App.jsx                 Composition and loader gating
+│   ├── main.jsx                React entry point
+│   └── index.css               Tailwind import and base/global styles
+├── index.html                  HTML shell and SEO / social meta
 ├── vite.config.js
 ├── tailwind.config.cjs
 ├── postcss.config.cjs
 ├── eslint.config.js
-├── .env.example            # Template for EmailJS credentials
+├── .env.example                Template for EmailJS credentials
 └── package.json
 ```
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 
-- **Node.js ≥ 20.19** (required by Vite 7)
+- **Node.js >= 20.19** (required by Vite 7)
 - **npm** (bundled with Node)
 
 ### Installation
@@ -232,11 +226,11 @@ The app runs at **http://localhost:5173** by default.
 
 ---
 
-## ⚙️ Configuration
+## Configuration
 
 The contact form uses [EmailJS](https://dashboard.emailjs.com/). Provide the following
-environment variables in a `.env` file at the project root (Vite only exposes variables
-prefixed with `VITE_`):
+environment variables in a `.env` file at the project root. Vite only exposes variables
+prefixed with `VITE_`.
 
 | Variable | Description |
 |---|---|
@@ -248,7 +242,7 @@ prefixed with `VITE_`):
 
 ---
 
-## 📜 Available Scripts
+## Available Scripts
 
 | Command | Description |
 |---|---|
@@ -259,23 +253,24 @@ prefixed with `VITE_`):
 
 ---
 
-## ☁️ Deployment
+## Deployment
 
-Any static host works since the output in `dist/` is fully static:
+Any static host works because the output in `dist/` is fully static.
 
 1. Build the site:
    ```bash
    npm run build
    ```
-2. Deploy the `dist/` folder to a static host (e.g. **Vercel**, **Netlify**, or **GitHub Pages**).
+2. Deploy the `dist/` folder to a static host (for example **Vercel**, **Netlify**, or
+   **GitHub Pages**).
 3. Set the `VITE_EMAILJS_*` environment variables in your host's dashboard so the contact
    form works in production.
 
 ---
 
-## 📄 License
+## License
 
 **© Aakash Wijesekara. All rights reserved.**
 
-This is a private project. The source code, design, content, and assets are not licensed
-for reuse, redistribution, or modification.
+This is a private project. The source code, design, content, and assets are not licensed for
+reuse, redistribution, or modification.
