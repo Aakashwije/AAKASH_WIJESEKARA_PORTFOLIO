@@ -44,12 +44,12 @@ function Contact() {
   };
 
   return (
-    <section id="contact" className="py-16 md:py-24 bg-[#2b2f36] relative">
+    <section id="contact" className="relative bg-[#2b2f36] px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
       <Toaster position="top-right" />
 
-      <div className="max-w-3xl mx-auto px-6">
+      <div className="mx-auto max-w-3xl">
 
-        <h2 className="text-3xl sm:text-4xl font-bold text-white mb-10 text-center md:text-left">
+        <h2 className="mb-10 text-center text-3xl font-bold text-white sm:text-4xl md:text-left">
           Contact <span className="text-yellow-400">Me</span>
         </h2>
 
@@ -58,28 +58,36 @@ function Contact() {
           <input
             type="text"
             name="name"
+            autoComplete="name"
+            aria-label="Your name"
+            required
             placeholder="Your Name"
-            className="w-full px-5 py-4 rounded-md bg-[#1f2329] text-white outline-none focus:ring-2 focus:ring-yellow-400"
+            className="w-full rounded-md bg-[#1f2329] px-4 py-3.5 text-base text-white outline-none placeholder:text-gray-500 focus:ring-2 focus:ring-yellow-400 sm:px-5 sm:py-4"
           />
 
           <input
             type="email"
             name="email"
+            autoComplete="email"
+            aria-label="Your email"
+            required
             placeholder="Your Email"
-            className="w-full px-5 py-4 rounded-md bg-[#1f2329] text-white outline-none focus:ring-2 focus:ring-yellow-400"
+            className="w-full rounded-md bg-[#1f2329] px-4 py-3.5 text-base text-white outline-none placeholder:text-gray-500 focus:ring-2 focus:ring-yellow-400 sm:px-5 sm:py-4"
           />
 
           <textarea
             name="message"
             rows="6"
+            aria-label="Your message"
+            required
             placeholder="Your Message"
-            className="w-full px-5 py-4 rounded-md bg-[#1f2329] text-white outline-none focus:ring-2 focus:ring-yellow-400"
+            className="w-full resize-y rounded-md bg-[#1f2329] px-4 py-3.5 text-base text-white outline-none placeholder:text-gray-500 focus:ring-2 focus:ring-yellow-400 sm:px-5 sm:py-4"
           />
 
           <button
             type="submit"
             disabled={loading}
-            className="border-2 border-yellow-400 text-yellow-400 px-4 sm:px-10 py-3 sm:py-4 font-semibold hover:bg-yellow-400 hover:text-black transition-all duration-300 flex items-center gap-3 disabled:opacity-60 w-full sm:w-auto justify-center"
+            className="flex min-h-12 w-full items-center justify-center gap-3 border-2 border-yellow-400 px-4 py-3 font-semibold text-yellow-400 transition-all duration-300 hover:bg-yellow-400 hover:text-black focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-yellow-300 disabled:opacity-60 sm:w-auto sm:px-10 sm:py-4"
           >
             {loading && (
               <span className="w-5 h-5 border-2 border-yellow-400 border-t-transparent rounded-full animate-spin"></span>

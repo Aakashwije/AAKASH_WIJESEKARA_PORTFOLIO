@@ -6,64 +6,67 @@ function Hero() {
   return (
     <section
       id="home"
-      className="relative min-h-screen bg-[#242629] overflow-hidden flex flex-col md:block" // Changed h-screen to min-h-screen
+      className="relative isolate min-h-[100svh] overflow-hidden bg-[#242629]"
     >
-      {/* TECH COMPONENT BACKGROUND */}
       <TechBackground />
 
-      {/* CONTENT */}
-      <div className="relative z-10 max-w-[1400px] mx-auto h-full px-6 md:px-14 grid md:grid-cols-3 grid-cols-1 gap-6 pt-20 md:pt-0"> {/* Added top padding for mobile */}
-
-        {/* LEFT */}
-        <div className="flex flex-col justify-center pb-5 pl-0 md:pl-2 text-white order-2 md:order-1"> {/* order changed for mobile if needed, but keeping default for now effectively */}
-          <h1 className="text-4xl sm:text-5xl md:text-7xl xl:text-8xl font-bold leading-tight text-white mt-10 md:mt-0">
-            Aakash <br />
-            Wijesekara<span className="text-yellow-400 ml-1">.</span>
+      <div className="hero-layout">
+        <div className="hero-primary flex flex-col items-center text-white lg:items-start">
+          <h1 className="text-[clamp(2.75rem,13vw,4.75rem)] font-bold leading-[0.98] tracking-[-0.04em] text-white lg:text-6xl xl:text-7xl 2xl:text-8xl">
+            <span className="block">Aakash</span>
+            <span className="block">
+              Wijesekara<span className="ml-1 text-yellow-400">.</span>
+            </span>
           </h1>
 
-          <div className="h-[2px] w-12 bg-yellow-400 my-6"></div>
+          <div className="my-5 h-0.5 w-12 bg-yellow-400 sm:my-6" />
+        </div>
 
+        <div className="hero-actions flex max-w-sm flex-col gap-3 min-[360px]:max-w-none min-[360px]:flex-row lg:w-auto lg:flex-col xl:flex-row">
           <a
             href={resume}
             download
-            className="inline-block border-2 border-yellow-400 text-yellow-400 px-6 py-3 sm:px-10 sm:py-4 text-base sm:text-lg hover:bg-yellow-400 hover:text-black transition w-fit mb-4"
+            className="inline-flex min-h-12 w-full items-center justify-center border-2 border-yellow-400 px-4 py-3 text-sm font-semibold tracking-wide text-yellow-400 transition hover:bg-yellow-400 hover:text-black focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-yellow-300 focus-visible:ring-offset-2 focus-visible:ring-offset-[#242629] min-[360px]:w-auto sm:px-7 sm:text-base"
           >
             MY RESUME
           </a>
 
           <a
             href="#contact"
-            className="inline-block border-2 border-yellow-400 text-yellow-400 px-6 py-3 sm:px-10 sm:py-4 text-base sm:text-lg hover:bg-yellow-400 hover:text-black transition w-fit"
+            className="inline-flex min-h-12 w-full items-center justify-center border-2 border-yellow-400 px-4 py-3 text-sm font-semibold tracking-wide text-yellow-400 transition hover:bg-yellow-400 hover:text-black focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-yellow-300 focus-visible:ring-offset-2 focus-visible:ring-offset-[#242629] min-[360px]:w-auto sm:px-7 sm:text-base"
           >
             CONTACT ME
           </a>
         </div>
 
-        <div className="hidden md:block md:order-2"></div>
+        <div className="hero-portrait">
+          <img
+            src={heroImg}
+            alt="Portrait of Aakash Wijesekara"
+            width="1024"
+            height="1536"
+            fetchPriority="high"
+            decoding="async"
+            className="pointer-events-none drop-shadow-2xl"
+          />
+        </div>
 
-        {/* RIGHT */}
-        <div className="flex flex-col justify-center pt-5 md:pt-0 pb-10 md:pb-30 pl-0 md:pl-20 text-white order-3">
-          <p className="text-yellow-400 tracking-widest text-sm mb-3">INTRODUCTION</p>
+        <div className="hero-intro text-white">
+          <p className="mb-3 text-xs font-medium tracking-[0.22em] text-yellow-400 sm:text-sm">
+            INTRODUCTION
+          </p>
 
-          <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold mb-6 text-white">
-            UNDERGRADUATE <br /> COMPUTER SCIENCE <br /> STUDENT
+          <h2 className="mb-4 text-[clamp(1.65rem,7vw,2.5rem)] font-bold leading-tight text-white lg:text-3xl xl:text-4xl 2xl:text-5xl">
+            UNDERGRADUATE
+            <span className="block">COMPUTER SCIENCE</span>
+            <span className="block">STUDENT</span>
           </h2>
 
-          <p className="text-base sm:text-lg text-gray-300">
-            Software Engineer Intern <span className="text-yellow-400">@ WSO2</span>
+          <p className="text-base text-gray-300 sm:text-lg">
+            Software Engineer Intern{" "}
+            <span className="whitespace-nowrap text-yellow-400">@ WSO2</span>
           </p>
         </div>
-      </div>
-
-      {/* HERO IMAGE */}
-      <div className="relative md:absolute md:bottom-0 md:right-[32%] w-full md:w-auto flex justify-center md:block z-0 order-1 md:order-none mt-10 md:mt-0">
-        <img
-          src={heroImg}
-          alt="Portrait of Aakash Wijesekara"
-          fetchPriority="high"
-          decoding="async"
-          className="w-64 sm:w-80 md:w-auto h-auto md:h-[92vh] object-contain pointer-events-none drop-shadow-2xl"
-        />
       </div>
     </section>
   );

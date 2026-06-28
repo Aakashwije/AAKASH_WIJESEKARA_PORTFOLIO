@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { motion as Motion } from "framer-motion";
 import {
   FaCode,
   FaProjectDiagram,
@@ -63,33 +63,32 @@ const services = [
 
 function Services() {
   return (
-    <section id="services" className="bg-[#24282c] text-white py-16 md:py-28 px-6 md:px-20">
-      <div className="max-w-7xl mx-auto">
+    <section id="services" className="bg-[#24282c] px-4 py-16 text-white sm:px-6 sm:py-20 lg:px-8 lg:py-28">
+      <div className="mx-auto max-w-7xl">
         {/* TITLE */}
-        <motion.div
+        <Motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-center mb-20"
+          className="mb-10 text-center sm:mb-14 lg:mb-20"
         >
           <p className="text-yellow-400 tracking-widest mb-3">WHAT I DO</p>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold">
+          <h2 className="text-3xl font-bold sm:text-4xl lg:text-5xl">
             Areas of Learning & Practice
           </h2>
-        </motion.div>
+        </Motion.div>
 
         {/* GRID */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-10">
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 lg:gap-8">
           {services.map((s, i) => (
-            <motion.div
+            <Motion.div
               key={i}
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: i * 0.08 }}
               viewport={{ once: true }}
-              className="bg-[#1f2226] rounded-xl p-6 sm:p-8 text-center hover:scale-[1.03]                     
-                border border-transparent hover:border-yellow-400 transition-transform duration-300"
+              className="rounded-xl border border-transparent bg-[#1f2226] p-5 text-center transition duration-300 hover:border-yellow-400 sm:p-7 lg:hover:scale-[1.03]"
             >
               <div className="text-yellow-400 text-4xl mb-5 flex justify-center">
                 {s.icon}
@@ -100,7 +99,7 @@ function Services() {
               <p className="text-gray-400 text-sm leading-relaxed">
                 {s.desc}
               </p>
-            </motion.div>
+            </Motion.div>
           ))}
         </div>
       </div>

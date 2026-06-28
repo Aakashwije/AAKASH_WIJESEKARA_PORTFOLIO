@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { motion as Motion } from "framer-motion";
 import {
   FaStar,
   FaMedal,
@@ -74,38 +74,38 @@ function Activities() {
   return (
     <section
       id="activities"
-      className="bg-[#2f3338] text-white py-24 px-6 md:px-20 glow-hover"
+      className="glow-hover bg-[#2f3338] px-4 py-16 text-white sm:px-6 sm:py-20 lg:px-8 lg:py-24"
     >
-      <div className="max-w-7xl mx-auto">
+      <div className="mx-auto max-w-7xl">
 
         {/* TITLE */}
-        <motion.div
+        <Motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="mb-10 text-center sm:mb-14 lg:mb-16"
         >
           <p className="text-yellow-400 tracking-widest mb-3">
             ACTIVITIES & LEADERSHIP
           </p>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold">
+          <h2 className="text-3xl font-bold sm:text-4xl lg:text-5xl">
             Beyond Academics
           </h2>
-        </motion.div>
+        </Motion.div>
 
         {/* CARDS GRID */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4 lg:gap-8">
 
           {activities.map((item, i) => (
-            <motion.div
+            <Motion.div
   key={i}
   initial={{ opacity: 0, y: 40 }}
   whileInView={{ opacity: 1, y: 0 }}
   transition={{ duration: 0.6, delay: i * 0.1 }}
   viewport={{ once: true }}
   className="
-    bg-[#1f2226] rounded-xl p-6 text-center
+    bg-[#1f2226] rounded-xl p-5 sm:p-6 text-center
     border border-transparent
     hover:border-yellow-400
     transition-all duration-300 
@@ -124,7 +124,7 @@ function Activities() {
   <p className="text-gray-400 text-sm leading-relaxed">
     {item.desc}
   </p>
-</motion.div>
+</Motion.div>
 
           ))}
 

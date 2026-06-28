@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, motion as Motion } from "framer-motion";
 import ScrollTop from "./components/ScrollTop.jsx";
 import Loader from "./components/Loader.jsx";
 import Navbar from "./components/Navbar.jsx";
@@ -54,7 +54,7 @@ function App() {
       </AnimatePresence>
 
       {!loading && (
-        <motion.div
+        <Motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
@@ -70,7 +70,7 @@ function App() {
           <Testimonials />
           <Contact />
           <Footer />
-        </motion.div>
+        </Motion.div>
       )}
     </>
   );

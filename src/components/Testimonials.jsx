@@ -1,4 +1,3 @@
-import React from "react";
 import riyaz from "../assets/riyaz.jpeg";
 import chinthaka from "../assets/chinthaka.jpg";
 import { FaPhoneAlt, FaEnvelope } from "react-icons/fa";
@@ -28,17 +27,17 @@ function Testimonials() {
   ];
 
   return (
-    <section id="testimonials" className="py-24 bg-[#1f2329]">
-      <div className="max-w-6xl mx-auto px-6">
-        <h2 className="text-3xl sm:text-4xl font-bold text-white mb-12 text-center">
+    <section id="testimonials" className="bg-[#1f2329] px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
+      <div className="mx-auto max-w-6xl">
+        <h2 className="mb-10 text-center text-3xl font-bold text-white sm:mb-12 sm:text-4xl">
           Testimonials <span className="text-yellow-400">Reviews</span>
         </h2>
 
-        <div className="grid md:grid-cols-2 gap-10">
+        <div className="grid gap-6 md:grid-cols-2 lg:gap-10">
           {testimonials.map((t, index) => (
             <div
               key={index}
-              className="bg-[#2b2f36] rounded-xl p-6 sm:p-8 shadow-lg border border-yellow-400/30 hover:border-yellow-400 transition-all duration-300"
+              className="rounded-xl border border-yellow-400/30 bg-[#2b2f36] p-5 shadow-lg transition-all duration-300 hover:border-yellow-400 sm:p-8"
             >
               <div className="flex flex-col sm:flex-row items-center gap-5 mb-6 text-center sm:text-left">
                 <img
@@ -49,27 +48,27 @@ function Testimonials() {
                   className="w-20 h-20 rounded-full object-cover border-2 border-yellow-400 mx-auto sm:mx-0"
                 />
 
-                <div className="flex-1">
+                <div className="min-w-0 flex-1">
                   <h3 className="text-xl font-semibold text-white">{t.name}</h3>
                   <p className="text-yellow-400 text-sm">{t.role}</p>
                 </div>
               </div>
 
-            <p className="text-gray-300 leading-relaxed mb-6 text-justify">
+            <p className="mb-6 text-left leading-relaxed text-gray-300">
   "{t.description}"
 </p>
 
               <div className="space-y-3 text-gray-300 flex flex-col items-center sm:items-start text-center sm:text-left">
-  <div className="flex items-center justify-center sm:justify-start gap-3">
+  <div className="flex items-center justify-center gap-3 sm:justify-start">
     <FaPhoneAlt className="text-yellow-400" />
     <span className="text-white font-medium">{t.phone}</span>
   </div>
 
-  <div className="flex items-center justify-center sm:justify-start gap-3">
+  <div className="flex min-w-0 items-center justify-center gap-3 sm:justify-start">
     <FaEnvelope className="text-yellow-400" />
     <a
       href={`mailto:${t.email}`}
-      className="text-yellow-400 hover:underline"
+      className="min-w-0 break-all text-yellow-400 hover:underline"
     >
       {t.email}
     </a>

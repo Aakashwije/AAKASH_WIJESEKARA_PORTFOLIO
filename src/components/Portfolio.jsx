@@ -1,6 +1,6 @@
-import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { FaGithub, FaExternalLinkAlt, FaTimes } from "react-icons/fa";
+import { useEffect, useState } from "react";
+import { AnimatePresence, motion as Motion } from "framer-motion";
+import { FaGithub, FaTimes } from "react-icons/fa";
 import procurax from "../assets/procurax.png";
 import walletx from "../assets/walletx.png";
 import portfolioImg from "../assets/aakashPort.png";
@@ -65,41 +65,65 @@ const projects = [
 function Projects() {
   const [activeProject, setActiveProject] = useState(null);
 
+  useEffect(() => {
+    if (!activeProject) return undefined;
+
+    const previousOverflow = document.body.style.overflow;
+    const closeOnEscape = (event) => {
+      if (event.key === "Escape") setActiveProject(null);
+    };
+
+    document.body.style.overflow = "hidden";
+    window.addEventListener("keydown", closeOnEscape);
+
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      window.removeEventListener("keydown", closeOnEscape);
+    };
+  }, [activeProject]);
+
   return (
     <section
       id="projects"
-      className="bg-[#2f3338] text-white py-16 md:py-24 px-6 md:px-20 glow-hover"
+      className="glow-hover bg-[#2f3338] px-4 py-16 text-white sm:px-6 sm:py-20 lg:px-8 lg:py-24"
     >
-      <div className="max-w-7xl mx-auto">
+      <div className="mx-auto max-w-7xl">
 
         {/* TITLE */}
-        <motion.div
+        <Motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="mb-10 text-center sm:mb-14 lg:mb-16"
         >
           <p className="text-yellow-400 tracking-widest mb-3">PROJECTS</p>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold">
+          <h2 className="text-3xl font-bold sm:text-4xl lg:text-5xl">
             Practical Projects
           </h2>
-        </motion.div>
+        </Motion.div>
 
         {/* GRID */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-10">
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 lg:gap-8">
 
           {projects.map((project, i) => (
-            <motion.div
+            <Motion.article
               key={i}
+              role="button"
+              tabIndex={0}
+              aria-label={`View details for ${project.title}`}
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: i * 0.1 }}
               viewport={{ once: true }}
               onClick={() => setActiveProject(project)}
-              className="cursor-pointer group relative bg-[#1f2226] rounded-xl overflow-hidden shadow-lg                    
-               border border-transparent
-              hover:border-yellow-400"
+              onKeyDown={(event) => {
+                if (event.key === "Enter" || event.key === " ") {
+                  event.preventDefault();
+                  setActiveProject(project);
+                }
+              }}
+              className="group relative cursor-pointer overflow-hidden rounded-xl border border-transparent bg-[#1f2226] text-left shadow-lg transition hover:border-yellow-400 focus-visible:border-yellow-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-yellow-400 focus-visible:ring-offset-2 focus-visible:ring-offset-[#2f3338]"
             >
 
               {/* IMAGE */}
@@ -108,11 +132,11 @@ function Projects() {
                 alt={project.title}
                 loading="lazy"
                 decoding="async"
-                className="w-full h-40 sm:h-48 object-cover group-hover:scale-110 transition duration-500"
+                className="h-44 w-full object-cover transition duration-500 group-hover:scale-105 sm:h-48"
               />
 
               {/* OVERLAY */}
-              <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+              <div className="pointer-events-none absolute inset-x-0 top-0 flex h-44 items-center justify-center bg-black/60 opacity-0 transition group-hover:opacity-100 group-focus-visible:opacity-100 sm:h-48">
                 <p className="text-yellow-400 font-semibold">
                   View Details
                 </p>
@@ -139,7 +163,7 @@ function Projects() {
                   ))}
                 </div>
               </div>
-            </motion.div>
+            </Motion.article>
           ))}
 
         </div>
@@ -148,38 +172,45 @@ function Projects() {
       {/* MODAL */}
       <AnimatePresence>
         {activeProject && (
-          <motion.div
-            className="fixed inset-0 bg-black/70 z-50 flex items-center justify-center px-4"
+          <Motion.div
+            className="fixed inset-0 z-[60] flex items-center justify-center bg-black/75 p-3 backdrop-blur-sm sm:p-4"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
+            onClick={() => setActiveProject(null)}
           >
-            <motion.div
-              initial={{ scale: 0.8, opacity: 0 }}
+            <Motion.div
+              initial={{ scale: 0.96, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.8, opacity: 0 }}
+              exit={{ scale: 0.96, opacity: 0 }}
               transition={{ duration: 0.3 }}
-              className="bg-[#1f2226] rounded-xl max-w-lg w-full p-6 relative max-h-[90vh] overflow-y-auto" // Added max-h and overflow-y-auto
+              role="dialog"
+              aria-modal="true"
+              aria-labelledby="project-dialog-title"
+              onClick={(event) => event.stopPropagation()}
+              className="relative max-h-[calc(100dvh-1.5rem)] w-full max-w-lg overflow-y-auto overscroll-contain rounded-xl bg-[#1f2226] p-4 shadow-2xl sm:max-h-[calc(100dvh-2rem)] sm:p-6"
             >
 
               <button
+                type="button"
                 onClick={() => setActiveProject(null)}
-                className="absolute top-4 right-4 text-gray-400 hover:text-white bg-[#1f2226] rounded-full p-1 z-10" // Added bg and padding for better visibility
+                aria-label="Close project details"
+                className="absolute right-3 top-3 z-10 flex size-11 items-center justify-center rounded-full bg-[#1f2226]/95 text-gray-300 shadow-md transition hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-yellow-400"
               >
                 <FaTimes size={20} />
               </button>
 
               <img
                 src={activeProject.image}
-                alt=""
-                className="w-full h-40 md:h-52 object-cover rounded-lg mb-4"
+                alt={activeProject.title}
+                className="mb-4 h-40 w-full rounded-lg object-cover sm:h-52"
               />
 
-              <h3 className="text-2xl font-bold mb-2">
+              <h3 id="project-dialog-title" className="mb-2 pr-9 text-xl font-bold sm:text-2xl">
                 {activeProject.title}
               </h3>
 
-              <p className="text-gray-300 mb-4 text-sm md:text-base"> {/* Adjusted font size for mobile */}
+              <p className="mb-4 text-sm leading-relaxed text-gray-300 sm:text-base">
                 {activeProject.desc}
               </p>
 
@@ -194,12 +225,12 @@ function Projects() {
                 ))}
               </div>
 
-              <div className="flex gap-4">
+              <div className="flex flex-wrap gap-4">
                 <a
                   href={activeProject.github}
                   target="_blank"
                   rel="noreferrer"
-                  className="flex items-center gap-2 border border-yellow-400 text-yellow-400 px-4 py-2 rounded hover:bg-yellow-400 hover:text-black transition"
+                  className="flex min-h-11 items-center justify-center gap-2 rounded border border-yellow-400 px-4 py-2 text-yellow-400 transition hover:bg-yellow-400 hover:text-black focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-yellow-300"
                 >
                   <FaGithub /> GitHub
                 </a>
@@ -207,8 +238,8 @@ function Projects() {
 
               </div>
 
-            </motion.div>
-          </motion.div>
+            </Motion.div>
+          </Motion.div>
         )}
       </AnimatePresence>
     </section>

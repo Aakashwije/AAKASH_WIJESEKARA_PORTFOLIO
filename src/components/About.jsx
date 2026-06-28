@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { motion as Motion } from "framer-motion";
 import { FaPython, FaJava, FaJs, FaReact, FaDatabase, FaNodeJs, FaDocker, FaGitAlt } from "react-icons/fa";
 import { SiFlutter, SiReact, SiMongodb, SiFirebase, SiGo, SiKubernetes } from "react-icons/si";
 
@@ -23,51 +23,51 @@ const skills = [
 
 function About() {
   return (
-    <section id="about" className="bg-[#2b2f33] text-white py-16 md:py-28 px-6 md:px-20">
-      <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 md:gap-16 items-center">
+    <section id="about" className="bg-[#2b2f33] px-4 py-16 text-white sm:px-6 sm:py-20 lg:px-8 lg:py-28">
+      <div className="mx-auto grid max-w-7xl items-start gap-12 lg:grid-cols-2 lg:gap-16">
 
         {/* LEFT CONTENT */}
-        <motion.div
+        <Motion.div
           initial={{ opacity: 0, x: -40 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.7 }}
           viewport={{ once: true }}
         >
-          <p className="text-yellow-400 tracking-widest mb-3">ABOUT ME</p>
+          <p className="mb-3 text-sm tracking-widest text-yellow-400">ABOUT ME</p>
 
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6">
+          <h2 className="mb-6 text-3xl font-bold sm:text-4xl lg:text-5xl">
             Who I Am
           </h2>
 
-          <p className="text-gray-300 leading-relaxed mb-6">
+          <p className="mb-6 leading-relaxed text-gray-300">
             I’m currently pursuing a BSc (Hons) in Computer Science (University of Westminster award) at IIT, Sri Lanka, and have built practical experience designing and delivering end-to-end web and mobile solutions (projects include ProcuraX, EnerBridge, and portfolio work). I hold certifications in cybersecurity and ML and regularly apply modern stacks such as React, Flutter, Node.js, and SQL/NoSQL databases in both individual and team projects. My coursework and project work have given me hands-on experience in UI design, backend integration, real-time features, and secure system design.
           </p>
 
-          <p className="text-gray-400 leading-relaxed mb-6 text-left md:text-justify">
+          <p className="mb-6 text-left leading-relaxed text-gray-400 lg:text-justify">
             Beyond academics, I’ve held significant leadership roles at Royal College, Colombo 07 — serving as a Senior Prefect and as Captain of the 1st XI Hockey team (led the team to the Hockey Big Match victory after a nine-year gap). I also co-chaired the Blue & Gold Hockey 7s, the largest hockey tournament in Sri Lanka, and have represented both school and national teams in hockey and squash. These experiences taught me strategic leadership, clear communication under pressure, squad management, and how to motivate diverse teams to perform on deadline.
 
           </p>
 
-          <p className="text-gray-400 leading-relaxed text-left md:text-justify">
+          <p className="text-left leading-relaxed text-gray-400 lg:text-justify">
             I combine that leadership with disciplined technical work: I’m comfortable taking a project from concept to delivery, mentoring peers during group work, and adapting quickly to new tools and methods. My strengths are problem solving, rapid prototyping, secure coding practices, and an eagerness to learn — especially in full-stack development, mobile apps, cybersecurity, and machine learning. I’m currently interning as a Software Engineer at WSO2, where I contribute to real-world API and AI gateway products while continuing to develop technically and apply the teamwork and leadership skills I gained through prefectship and sport.
 
           </p>
 
-        </motion.div>
+        </Motion.div>
 
         {/* RIGHT SKILLS */}
-        <motion.div
+        <Motion.div
           initial={{ opacity: 0, x: 40 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.7 }}
           viewport={{ once: true }}
-          className="space-y-8"
+          className="space-y-8 lg:sticky lg:top-24"
         >
-          <h3 className="text-3xl font-bold mb-6">Technical Skills</h3>
+          <h3 className="mb-6 text-2xl font-bold sm:text-3xl">Technical Skills</h3>
 
-          <div className="space-y-7 mt-8">
+          <div className="mt-8 space-y-6 sm:space-y-7">
             {skills.map((skill, i) => (
-              <motion.div
+              <Motion.div
                 key={i}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -83,17 +83,17 @@ function About() {
                 </div>
 
                 <div className="w-full h-3 bg-[#1f2226] rounded-full overflow-hidden">
-                  <motion.div
+                  <Motion.div
                     className="h-full rounded-full bg-gradient-to-r from-yellow-300 to-yellow-500"
                     initial={{ width: 0 }}
                     whileInView={{ width: `${skill.percent}%` }}
                     transition={{ duration: 1.2, ease: "easeOut" }}
                   />
                 </div>
-              </motion.div>
+              </Motion.div>
             ))}
           </div>
-        </motion.div>
+        </Motion.div>
       </div>
     </section>
   );

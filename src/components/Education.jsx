@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { motion as Motion } from "framer-motion";
 
 const educationData = [
   {
@@ -32,49 +32,49 @@ function Education() {
   return (
     <section
       id="education"
-      className="bg-[#2b2f33] text-white py-16 md:py-24 px-6 md:px-20 glow-hover"
+      className="glow-hover bg-[#2b2f33] px-4 py-16 text-white sm:px-6 sm:py-20 lg:px-8 lg:py-24"
     >
-      <div className="max-w-6xl mx-auto">
+      <div className="mx-auto max-w-6xl">
 
         {/* Section Title */}
-        <motion.div
+        <Motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-center mb-20"
+          className="mb-12 text-center sm:mb-16 lg:mb-20"
         >
           <p className="text-yellow-400 tracking-widest mb-3">EDUCATION</p>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold">
+          <h2 className="text-3xl font-bold sm:text-4xl lg:text-5xl">
             My Academic Journey
           </h2>
-        </motion.div>
+        </Motion.div>
 
         {/* Timeline */}
         <div className="relative">
 
           {/* Vertical Line */}
-          <div className="absolute md:left-1/2 left-4 md:transform md:-translate-x-1/2 h-full w-[2px] bg-yellow-400/30"></div>
+          <div className="absolute bottom-0 left-2 top-0 w-[2px] bg-yellow-400/30 md:left-1/2 md:-translate-x-1/2" />
 
-          <div className="space-y-20">
+          <div className="space-y-10 sm:space-y-14 lg:space-y-20">
 
             {educationData.map((item, index) => (
-              <motion.div
+              <Motion.div
                 key={index}
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className={`relative flex flex-col md:flex-row ${index % 2 === 0 ? "md:justify-start" : "md:justify-end"
+                className={`relative flex flex-col pl-8 md:flex-row md:pl-0 ${index % 2 === 0 ? "md:justify-start" : "md:justify-end"
                   }`}
               >
 
                 {/* Dot */}
-                <span className="absolute md:left-1/2 left-4 md:transform md:-translate-x-1/2 w-5 h-5 bg-yellow-400 rounded-full border-4 border-[#2b2f33] z-10"></span>
+                <span className="absolute left-2 z-10 size-5 -translate-x-1/2 rounded-full border-4 border-[#2b2f33] bg-yellow-400 md:left-1/2" />
 
                 {/* Card */}
                 <div
-                  className={`bg-[#1f2226] rounded-xl p-6 w-full md:w-[45%]
+                  className={`bg-[#1f2226] rounded-xl p-5 sm:p-6 w-full md:w-[45%]
                     border border-transparent
                     hover:border-yellow-400
                     transition-all duration-300
@@ -98,7 +98,7 @@ function Education() {
                   </p>
                 </div>
 
-              </motion.div>
+              </Motion.div>
             ))}
 
           </div>

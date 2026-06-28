@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { motion as Motion } from "framer-motion";
 
 import github from "../assets/github.webp";
 import linkedin from "../assets/linkedln.png";
@@ -25,17 +25,17 @@ const iconStagger = {
 
 const Footer = () => {
   return (
-    <motion.footer
+    <Motion.footer
       variants={container}
       initial="visible"
       whileInView="visible"
       viewport={{ once: true }}
-      className="relative bg-[#1f232a] text-gray-300 pt-14 pb-6 mt-20"
+      className="relative mt-0 bg-[#1f232a] pb-[max(1.5rem,env(safe-area-inset-bottom))] pt-12 text-gray-300 sm:mt-12 lg:mt-20 lg:pt-14"
     >
       {/* TOP GLOW DIVIDER */}
       <div className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-yellow-400/50 to-transparent" />
 
-      <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-10 items-center">
+      <div className="mx-auto grid max-w-7xl items-center gap-9 px-4 sm:px-6 md:grid-cols-3 lg:px-8">
 
         {/* LEFT */}
         <div className="text-center md:text-left">
@@ -49,7 +49,7 @@ const Footer = () => {
         </div>
 
         {/* MIDDLE LINKS */}
-        <div className="flex justify-center gap-6 text-sm flex-wrap">
+        <nav aria-label="Footer navigation" className="flex flex-wrap justify-center gap-x-5 gap-y-3 text-sm">
           <a href="#home" className="hover:text-yellow-400 transition">Home</a>
           <a href="#about" className="hover:text-yellow-400 transition">About</a>
           <a href="#services" className="hover:text-yellow-400 transition">Learning</a>
@@ -59,12 +59,12 @@ const Footer = () => {
           <a href="#certificates" className="hover:text-yellow-400 transition">Achievements</a>
           <a href="#testimonials" className="hover:text-yellow-400 transition">Testimonials</a>
           <a href="#contact" className="hover:text-yellow-400 transition">Contact</a>
-        </div>
+        </nav>
 
         {/* RIGHT SOCIAL */}
-        <div className="flex justify-center md:justify-end gap-5">
+        <div className="flex justify-center gap-3 sm:gap-4 md:justify-end">
 
-          <motion.a
+          <Motion.a
             custom={0}
             variants={iconStagger}
             initial="hidden"
@@ -73,17 +73,19 @@ const Footer = () => {
             href="https://github.com/Aakashwije"
             target="_blank"
             rel="noreferrer"
+            aria-label="GitHub profile"
+            className="flex size-12 items-center justify-center rounded-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-yellow-400"
           >
             <img
               src={github}
               alt="GitHub"
               loading="lazy"
               decoding="async"
-              className="w-10 hover:scale-110 hover:-translate-y-1 transition"
+              className="w-9 transition hover:-translate-y-1 hover:scale-110"
             />
-          </motion.a>
+          </Motion.a>
 
-          <motion.a
+          <Motion.a
             custom={1}
             variants={iconStagger}
             initial="hidden"
@@ -92,17 +94,19 @@ const Footer = () => {
             href="https://www.linkedin.com/in/aakash-wijesekara-611588318/"
             target="_blank"
             rel="noreferrer"
+            aria-label="LinkedIn profile"
+            className="flex size-12 items-center justify-center rounded-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-yellow-400"
           >
             <img
               src={linkedin}
               alt="LinkedIn"
               loading="lazy"
               decoding="async"
-              className="w-12 hover:scale-110 hover:-translate-y-1 transition"
+              className="w-11 transition hover:-translate-y-1 hover:scale-110"
             />
-          </motion.a>
+          </Motion.a>
 
-          <motion.a
+          <Motion.a
             custom={2}
             variants={iconStagger}
             initial="hidden"
@@ -111,17 +115,19 @@ const Footer = () => {
             href="https://wa.me/94701566435"
             target="_blank"
             rel="noreferrer"
+            aria-label="WhatsApp"
+            className="flex size-12 items-center justify-center rounded-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-yellow-400"
           >
             <img
               src={whatsapp}
               alt="WhatsApp"
               loading="lazy"
               decoding="async"
-              className="w-12 hover:scale-110 hover:-translate-y-1 transition"
+              className="w-11 transition hover:-translate-y-1 hover:scale-110"
             />
-          </motion.a>
+          </Motion.a>
 
-          <motion.a
+          <Motion.a
             custom={3}
             variants={iconStagger}
             initial="hidden"
@@ -130,15 +136,17 @@ const Footer = () => {
             href="https://mail.google.com/mail/?view=cm&fs=1&to=aakashwije92@gmail.com"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="Send email"
+            className="flex size-12 items-center justify-center rounded-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-yellow-400"
           >
             <img
               src={email}
               alt="Email"
               loading="lazy"
               decoding="async"
-              className="w-12 hover:scale-110 hover:-translate-y-1 transition"
+              className="w-11 transition hover:-translate-y-1 hover:scale-110"
             />
-          </motion.a>
+          </Motion.a>
 
         </div>
 
@@ -148,7 +156,7 @@ const Footer = () => {
       <div className="text-center text-xs text-gray-500 mt-8">
         © {new Date().getFullYear()} Aakash Wijesekara. All rights reserved.
       </div>
-    </motion.footer>
+    </Motion.footer>
   );
 };
 

@@ -5,14 +5,22 @@
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
+  color-scheme: dark;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
 }
 
 body {
@@ -23,6 +31,166 @@ body {
   overflow-x: hidden;
   background-color: #242629;
   color: rgba(255, 255, 255, 0.87);
+}
+
+#root {
+  min-height: 100vh;
+  overflow: clip;
+}
+
+section {
+  scroll-margin-top: 5rem;
+}
+
+img,
+svg,
+canvas {
+  display: block;
+  max-width: 100%;
+}
+
+button,
+a,
+input,
+textarea {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button,
+a {
+  touch-action: manipulation;
+}
+
+h1,
+h2,
+h3,
+p {
+  overflow-wrap: break-word;
+}
+
+.hero-layout {
+  position: relative;
+  z-index: 10;
+  display: grid;
+  grid-template-areas:
+    "primary"
+    "portrait"
+    "intro"
+    "actions";
+  grid-template-columns: minmax(0, 1fr);
+  align-items: center;
+  gap: 1.75rem;
+  width: min(100%, 1400px);
+  min-height: 100svh;
+  margin-inline: auto;
+  padding: 6.5rem 1rem 0;
+}
+
+.hero-primary {
+  grid-area: primary;
+}
+
+.hero-intro {
+  grid-area: intro;
+}
+
+.hero-actions {
+  grid-area: actions;
+}
+
+.hero-primary,
+.hero-intro,
+.hero-actions {
+  width: 100%;
+  max-width: 38rem;
+  margin-inline: auto;
+  text-align: center;
+}
+
+.hero-portrait {
+  position: relative;
+  grid-area: portrait;
+  align-self: end;
+  justify-self: center;
+  width: min(86vw, 23rem);
+  height: clamp(22rem, 112vw, 29rem);
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.hero-portrait::before {
+  position: absolute;
+  z-index: -1;
+  right: 8%;
+  bottom: 7%;
+  left: 8%;
+  aspect-ratio: 1;
+  content: "";
+  border-radius: 999px;
+  background: rgb(250 204 21 / 12%);
+  filter: blur(28px);
+}
+
+.hero-portrait img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  object-position: center bottom;
+}
+
+@media (min-width: 1024px) {
+  .hero-layout {
+    grid-template-areas:
+      "primary portrait intro"
+      "actions portrait intro";
+    grid-template-columns:
+      minmax(0, 1fr)
+      minmax(19rem, 0.9fr)
+      minmax(0, 1fr);
+    grid-template-rows: 1fr 1fr;
+    gap: clamp(1.5rem, 2vw, 3rem);
+    padding: 5.5rem clamp(2rem, 4vw, 4.5rem) 0;
+  }
+
+  .hero-primary,
+  .hero-intro,
+  .hero-actions {
+    max-width: none;
+    margin-inline: 0;
+    text-align: left;
+  }
+
+  .hero-primary {
+    align-self: end;
+  }
+
+  .hero-actions {
+    align-self: start;
+  }
+
+  .hero-intro {
+    align-self: center;
+  }
+
+  .hero-portrait {
+    width: 100%;
+    height: auto;
+    max-width: 36rem;
+    overflow: visible;
+  }
+
+  .hero-portrait img {
+    max-height: calc(100svh - 4.5rem);
+  }
+}
+
+@media (min-width: 1536px) {
+  .hero-layout {
+    grid-template-columns:
+      minmax(0, 1fr)
+      minmax(23rem, 0.95fr)
+      minmax(0, 1fr);
+  }
 }
 
 /* Respect users who prefer reduced motion */
