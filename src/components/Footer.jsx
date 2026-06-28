@@ -44,6 +44,7 @@ const Footer = () => {
           </h3>
           <p className="text-sm mt-2 text-gray-400">
             Computer Science Undergraduate <br />
+            <span className="text-yellow-400">Software Engineer Intern @ WSO2</span>
           </p>
         </div>
 
@@ -52,6 +53,7 @@ const Footer = () => {
           <a href="#home" className="hover:text-yellow-400 transition">Home</a>
           <a href="#about" className="hover:text-yellow-400 transition">About</a>
           <a href="#services" className="hover:text-yellow-400 transition">Learning</a>
+          <a href="#experience" className="hover:text-yellow-400 transition">Experience</a>
           <a href="#education" className="hover:text-yellow-400 transition">Academics</a>
           <a href="#projects" className="hover:text-yellow-400 transition">Projects</a>
           <a href="#certificates" className="hover:text-yellow-400 transition">Achievements</a>
@@ -75,6 +77,8 @@ const Footer = () => {
             <img
               src={github}
               alt="GitHub"
+              loading="lazy"
+              decoding="async"
               className="w-10 hover:scale-110 hover:-translate-y-1 transition"
             />
           </motion.a>
@@ -92,6 +96,8 @@ const Footer = () => {
             <img
               src={linkedin}
               alt="LinkedIn"
+              loading="lazy"
+              decoding="async"
               className="w-12 hover:scale-110 hover:-translate-y-1 transition"
             />
           </motion.a>
@@ -109,6 +115,8 @@ const Footer = () => {
             <img
               src={whatsapp}
               alt="WhatsApp"
+              loading="lazy"
+              decoding="async"
               className="w-12 hover:scale-110 hover:-translate-y-1 transition"
             />
           </motion.a>
@@ -126,6 +134,8 @@ const Footer = () => {
             <img
               src={email}
               alt="Email"
+              loading="lazy"
+              decoding="async"
               className="w-12 hover:scale-110 hover:-translate-y-1 transition"
             />
           </motion.a>

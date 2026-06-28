@@ -24,10 +24,10 @@ function Contact() {
 
     emailjs
       .sendForm(
-        "service_p6rpuyf",       // ✅ Service ID
-        "template_8rjkagi",      // ✅ Template ID
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
         form.current,
-        "YiMktA5jPUax2Zztr"      // ✅ Public Key
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
       )
       .then(
         () => {

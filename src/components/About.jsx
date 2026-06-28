@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
-import { FaPython, FaJava, FaJs, FaReact, FaDatabase, FaNodeJs } from "react-icons/fa";
-import { SiFlutter, SiReact, SiMongodb, SiFirebase } from "react-icons/si";
+import { FaPython, FaJava, FaJs, FaReact, FaDatabase, FaNodeJs, FaDocker, FaGitAlt } from "react-icons/fa";
+import { SiFlutter, SiReact, SiMongodb, SiFirebase, SiGo, SiKubernetes } from "react-icons/si";
 
 
 const skills = [
@@ -14,6 +14,10 @@ const skills = [
   { name: "MySQL", percent: 65, icon: <FaDatabase className="text-blue-400" /> },
   { name: "MongoDB", percent: 60, icon: <SiMongodb className="text-green-500" /> },
   { name: "Firebase", percent: 60, icon: <SiFirebase className="text-yellow-400" /> },
+  { name: "Git", percent: 80, icon: <FaGitAlt className="text-orange-500" /> },
+  { name: "Docker", percent: 65, icon: <FaDocker className="text-blue-400" /> },
+  { name: "Go", percent: 60, icon: <SiGo className="text-cyan-400" /> },
+  { name: "Kubernetes", percent: 55, icon: <SiKubernetes className="text-blue-500" /> },
 ];
 
 
@@ -45,7 +49,7 @@ function About() {
           </p>
 
           <p className="text-gray-400 leading-relaxed text-left md:text-justify">
-            I combine that leadership with disciplined technical work: I’m comfortable taking a project from concept to delivery, mentoring peers during group work, and adapting quickly to new tools and methods. My strengths are problem solving, rapid prototyping, secure coding practices, and an eagerness to learn — especially in full-stack development, mobile apps, cybersecurity, and machine learning. I’m actively seeking internship or junior-level roles where I can contribute to meaningful products, continue developing technically, and apply the teamwork and leadership skills I gained through prefectship and sport.
+            I combine that leadership with disciplined technical work: I’m comfortable taking a project from concept to delivery, mentoring peers during group work, and adapting quickly to new tools and methods. My strengths are problem solving, rapid prototyping, secure coding practices, and an eagerness to learn — especially in full-stack development, mobile apps, cybersecurity, and machine learning. I’m currently interning as a Software Engineer at WSO2, where I contribute to real-world API and AI gateway products while continuing to develop technically and apply the teamwork and leadership skills I gained through prefectship and sport.
 
           </p>
 

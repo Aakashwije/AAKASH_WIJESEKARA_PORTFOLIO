@@ -48,6 +48,10 @@ function Hero() {
           <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold mb-6 text-white">
             UNDERGRADUATE <br /> COMPUTER SCIENCE <br /> STUDENT
           </h2>
+
+          <p className="text-base sm:text-lg text-gray-300">
+            Software Engineer Intern <span className="text-yellow-400">@ WSO2</span>
+          </p>
         </div>
       </div>
 
@@ -55,7 +59,9 @@ function Hero() {
       <div className="relative md:absolute md:bottom-0 md:right-[32%] w-full md:w-auto flex justify-center md:block z-0 order-1 md:order-none mt-10 md:mt-0">
         <img
           src={heroImg}
-          alt="Hero"
+          alt="Portrait of Aakash Wijesekara"
+          fetchPriority="high"
+          decoding="async"
           className="w-64 sm:w-80 md:w-auto h-auto md:h-[92vh] object-contain pointer-events-none drop-shadow-2xl"
         />
       </div>

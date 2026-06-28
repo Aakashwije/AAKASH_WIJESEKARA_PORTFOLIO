@@ -1,9 +1,11 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import { FaBars, FaTimes } from "react-icons/fa";
 
 const navLinks = [
   { name: "Home", link: "#home" },
   { name: "About", link: "#about" },
   { name: "Learning", link: "#services" },
+  { name: "Experience", link: "#experience" },
   { name: "Projects", link: "#projects" },
   { name: "Academics", link: "#education" },
   { name: "Achievements", link: "#certificates" },
@@ -16,7 +18,7 @@ function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [active, setActive] = useState("#home");
   const [showNav, setShowNav] = useState(true);
-  const [lastScroll, setLastScroll] = useState(0);
+  const lastScroll = useRef(0);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -24,6 +26,14 @@ function Navbar() {
 
       // background blur
       setScrolled(current > 50);
+
+      // hide on scroll down, reveal on scroll up (ignore tiny moves near top)
+      if (current > lastScroll.current && current > 200) {
+        setShowNav(false);
+      } else {
+        setShowNav(true);
+      }
+      lastScroll.current = current;
 
       // active section detect
       document.querySelectorAll("section").forEach((sec) => {
@@ -35,9 +45,9 @@ function Navbar() {
       });
     };
 
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [lastScroll]);
+  }, []);
 
   return (
     <nav
@@ -79,10 +89,11 @@ function Navbar() {
         {/* MOBILE BUTTON */}
         <button
           aria-label={menuOpen ? "Close menu" : "Open menu"}
+          aria-expanded={menuOpen}
           className="md:hidden text-white text-2xl"
           onClick={() => setMenuOpen(!menuOpen)}
         >
-          ☰
+          {menuOpen ? <FaTimes /> : <FaBars />}
         </button>
       </div>
 
